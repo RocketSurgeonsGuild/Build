@@ -1,4 +1,5 @@
 <Project Sdk="Microsoft.NET.Sdk">
+    <Import Project="..\Information\build\Rocket.Surgery.Build.Information.props" />
     <PropertyGroup>
         <TargetFrameworks>netstandard1.4;net45</TargetFrameworks>
     </PropertyGroup>
@@ -6,4 +7,5 @@
         <None Include="build/*.*" Pack="true" PackagePath="build" />
         <None Include="buildMultiTargeting/*.*" Pack="true" PackagePath="buildMultiTargeting" />
     </ItemGroup>
+    <Import Project="..\Information\build\Rocket.Surgery.Build.Information.targets" />
 </Project>
