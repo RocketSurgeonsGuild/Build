@@ -1,0 +1,11 @@
+﻿<Project>
+    <PropertyGroup>
+        <CoreCompileDependsOn>
+            $(CoreCompileDependsOn);
+            CopyAssemblyDataAttribute;
+        </CoreCompileDependsOn>
+    </PropertyGroup>
+    <Import Project="$(MSBuildThisFileDirectory)\gitversion.props" />
+    <Import Project="$(MSBuildThisFileDirectory)\gitlab.props" />
+    <Import Project="$(MSBuildThisFileDirectory)\appveyor.props" />
+</Project>

@@ -1,0 +1,10 @@
+﻿<Project>
+    <PropertyGroup Condition="'$(GITLAB_CI)'!=''">
+        <CoreCompileDependsOn>
+            $(CoreCompileDependsOn);
+            AddGitlabAttributes;
+        </CoreCompileDependsOn>
+
+        <RepositoryUrl>$(GITLAB_PROJECT_URL)</RepositoryUrl>
+    </PropertyGroup>
+</Project>

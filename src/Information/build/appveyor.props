@@ -1,0 +1,10 @@
+﻿<Project>
+    <PropertyGroup Condition="'$(APPVEYOR)'!=''">
+        <CoreCompileDependsOn>
+            $(CoreCompileDependsOn);
+            AddAppVeyorAttributes;
+        </CoreCompileDependsOn>
+
+        <RepositoryUrl>https://github.com/$(APPVEYOR_REPO_NAME)</RepositoryUrl>
+    </PropertyGroup>
+</Project>

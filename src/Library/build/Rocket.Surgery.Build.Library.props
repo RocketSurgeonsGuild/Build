@@ -1,0 +1,9 @@
+﻿<Project>
+    <PropertyGroup>
+        <Company>Rocket Surgeons Guild</Company>
+        <Copyright>Copyright David Driscoll © 2017</Copyright>
+        <Authors>David Driscoll</Authors>
+        <IsPackable>true</IsPackable>
+        <LangVersion>latest</LangVersion>
+    </PropertyGroup>
+</Project>

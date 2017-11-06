@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <Import Project="..\..\src\Information\build\Rocket.Surgery.Build.Information.props" />
+    <PropertyGroup>
+        <TargetFrameworks>netcoreapp2.0;net461</TargetFrameworks>
+        <GitVersion_SemVer Condition="'$(GitVersion_SemVer)' == ''">testing1234</GitVersion_SemVer>
+    </PropertyGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\..\src\Information\Rocket.Surgery.Build.Information.csproj" />
+    </ItemGroup>
+    <Import Project="..\..\src\Information\build\Rocket.Surgery.Build.Information.targets" />
+</Project>

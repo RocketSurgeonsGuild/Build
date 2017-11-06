@@ -1,0 +1,102 @@
+﻿<Project>
+    <Target Name="AddGitVersionAttributes" BeforeTargets="CoreCompile">
+        <ItemGroup>
+            <AssemblyAttribute Include="AssemblyData">
+                <_Parameter1>GitVersion_Major</_Parameter1>
+                <_Parameter2>$(GitVersion_Major)</_Parameter2>
+            </AssemblyAttribute>
+            <AssemblyAttribute Include="AssemblyData">
+                <_Parameter1>GitVersion_Minor</_Parameter1>
+                <_Parameter2>$(GitVersion_Minor)</_Parameter2>
+            </AssemblyAttribute>
+            <AssemblyAttribute Include="AssemblyData">
+                <_Parameter1>GitVersion_Patch</_Parameter1>
+                <_Parameter2>$(GitVersion_Patch)</_Parameter2>
+            </AssemblyAttribute>
+            <AssemblyAttribute Include="AssemblyData">
+                <_Parameter1>GitVersion_PreReleaseTag</_Parameter1>
+                <_Parameter2>$(GitVersion_PreReleaseTag)</_Parameter2>
+            </AssemblyAttribute>
+            <AssemblyAttribute Include="AssemblyData">
+                <_Parameter1>GitVersion_PreReleaseTagWithDash</_Parameter1>
+                <_Parameter2>$(GitVersion_PreReleaseTagWithDash)</_Parameter2>
+            </AssemblyAttribute>
+            <AssemblyAttribute Include="AssemblyData">
+                <_Parameter1>GitVersion_PreReleaseLabel</_Parameter1>
+                <_Parameter2>$(GitVersion_PreReleaseLabel)</_Parameter2>
+            </AssemblyAttribute>
+            <AssemblyAttribute Include="AssemblyData">
+                <_Parameter1>GitVersion_PreReleaseNumber</_Parameter1>
+                <_Parameter2>$(GitVersion_PreReleaseNumber)</_Parameter2>
+            </AssemblyAttribute>
+            <AssemblyAttribute Include="AssemblyData">
+                <_Parameter1>GitVersion_BuildMetaData</_Parameter1>
+                <_Parameter2>$(GitVersion_BuildMetaData)</_Parameter2>
+            </AssemblyAttribute>
+            <AssemblyAttribute Include="AssemblyData">
+                <_Parameter1>GitVersion_BuildMetaDataPadded</_Parameter1>
+                <_Parameter2>$(GitVersion_BuildMetaDataPadded)</_Parameter2>
+            </AssemblyAttribute>
+            <AssemblyAttribute Include="AssemblyData">
+                <_Parameter1>GitVersion_FullBuildMetaData</_Parameter1>
+                <_Parameter2>$(GitVersion_FullBuildMetaData)</_Parameter2>
+            </AssemblyAttribute>
+            <AssemblyAttribute Include="AssemblyData">
+                <_Parameter1>GitVersion_MajorMinorPatch</_Parameter1>
+                <_Parameter2>$(GitVersion_MajorMinorPatch)</_Parameter2>
+            </AssemblyAttribute>
+            <AssemblyAttribute Include="AssemblyData">
+                <_Parameter1>GitVersion_SemVer</_Parameter1>
+                <_Parameter2>$(GitVersion_SemVer)</_Parameter2>
+            </AssemblyAttribute>
+            <AssemblyAttribute Include="AssemblyData">
+                <_Parameter1>GitVersion_LegacySemVer</_Parameter1>
+                <_Parameter2>$(GitVersion_LegacySemVer)</_Parameter2>
+            </AssemblyAttribute>
+            <AssemblyAttribute Include="AssemblyData">
+                <_Parameter1>GitVersion_LegacySemVerPadded</_Parameter1>
+                <_Parameter2>$(GitVersion_LegacySemVerPadded)</_Parameter2>
+            </AssemblyAttribute>
+            <AssemblyAttribute Include="AssemblyData">
+                <_Parameter1>GitVersion_AssemblySemVer</_Parameter1>
+                <_Parameter2>$(GitVersion_AssemblySemVer)</_Parameter2>
+            </AssemblyAttribute>
+            <AssemblyAttribute Include="AssemblyData">
+                <_Parameter1>GitVersion_FullSemVer</_Parameter1>
+                <_Parameter2>$(GitVersion_FullSemVer)</_Parameter2>
+            </AssemblyAttribute>
+            <AssemblyAttribute Include="AssemblyData">
+                <_Parameter1>GitVersion_InformationalVersion</_Parameter1>
+                <_Parameter2>$(GitVersion_InformationalVersion)</_Parameter2>
+            </AssemblyAttribute>
+            <AssemblyAttribute Include="AssemblyData">
+                <_Parameter1>GitVersion_BranchName</_Parameter1>
+                <_Parameter2>$(GitVersion_BranchName)</_Parameter2>
+            </AssemblyAttribute>
+            <AssemblyAttribute Include="AssemblyData">
+                <_Parameter1>GitVersion_Sha</_Parameter1>
+                <_Parameter2>$(GitVersion_Sha)</_Parameter2>
+            </AssemblyAttribute>
+            <AssemblyAttribute Include="AssemblyData">
+                <_Parameter1>GitVersion_NuGetVersionV2</_Parameter1>
+                <_Parameter2>$(GitVersion_NuGetVersionV2)</_Parameter2>
+            </AssemblyAttribute>
+            <AssemblyAttribute Include="AssemblyData">
+                <_Parameter1>GitVersion_NuGetVersion</_Parameter1>
+                <_Parameter2>$(GitVersion_NuGetVersion)</_Parameter2>
+            </AssemblyAttribute>
+            <AssemblyAttribute Include="AssemblyData">
+                <_Parameter1>GitVersion_CommitsSinceVersionSource</_Parameter1>
+                <_Parameter2>$(GitVersion_CommitsSinceVersionSource)</_Parameter2>
+            </AssemblyAttribute>
+            <AssemblyAttribute Include="AssemblyData">
+                <_Parameter1>GitVersion_CommitsSinceVersionSourcePadded</_Parameter1>
+                <_Parameter2>$(GitVersion_CommitsSinceVersionSourcePadded)</_Parameter2>
+            </AssemblyAttribute>
+            <AssemblyAttribute Include="AssemblyData">
+                <_Parameter1>GitVersion_CommitDate</_Parameter1>
+                <_Parameter2>$(GitVersion_CommitDate)</_Parameter2>
+            </AssemblyAttribute>
+        </ItemGroup>
+    </Target>
+</Project>

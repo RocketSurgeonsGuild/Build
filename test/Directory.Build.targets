@@ -1,0 +1,8 @@
+<Project>
+    <ItemGroup>
+        <PackageReference Include="xunit.runner.visualstudio" Version="$(xunit_Version)" />
+        <PackageReference Include="xunit" Version="$(xunit_Version)" />
+        <PackageReference Include="FluentAssertions" Version="$(FluentAssertions_Version)" />
+        <DotNetCliToolReference Include="dotnet-xunit" Version="$(xunit_Version)" />
+    </ItemGroup>
+</Project>

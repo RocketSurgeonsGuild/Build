@@ -1,0 +1,15 @@
+﻿using System;
+
+// ReSharper disable once InconsistentNaming
+// ReSharper disable once CheckNamespace
+[AttributeUsage(AttributeTargets.Assembly, AllowMultiple = true)]
+class AssemblyDataAttribute : Attribute
+{
+    public AssemblyDataAttribute(string key, string value)
+    {
+        Value = value;
+        Key = key;
+    }
+    public string Key { get; }
+    public string Value { get; }
+}

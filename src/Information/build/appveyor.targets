@@ -1,0 +1,58 @@
+﻿<Project>
+    <Target Name="AddAppVeyorAttributes" BeforeTargets="CoreCompile" Condition="'$(APPVEYOR)'!=''">
+        <ItemGroup>
+            <AssemblyAttribute Include="AssemblyData">
+                <_Parameter1>AppVeyor_ProjectId</_Parameter1>
+                <_Parameter2>$(APPVEYOR_PROJECT_ID)</_Parameter2>
+            </AssemblyAttribute>
+            <AssemblyAttribute Include="AssemblyData">
+                <_Parameter1>AppVeyor_ProjectName</_Parameter1>
+                <_Parameter2>$(APPVEYOR_PROJECT_NAME)</_Parameter2>
+            </AssemblyAttribute>
+            <AssemblyAttribute Include="AssemblyData">
+                <_Parameter1>AppVeyor_BuildId</_Parameter1>
+                <_Parameter2>$(APPVEYOR_BUILD_ID)</_Parameter2>
+            </AssemblyAttribute>
+            <AssemblyAttribute Include="AssemblyData">
+                <_Parameter1>AppVeyor_BuildNumber</_Parameter1>
+                <_Parameter2>$(APPVEYOR_BUILD_NUMBER)</_Parameter2>
+            </AssemblyAttribute>
+            <AssemblyAttribute Include="AssemblyData">
+                <_Parameter1>AppVeyor_BuildVersion</_Parameter1>
+                <_Parameter2>$(APPVEYOR_BUILD_VERSION)</_Parameter2>
+            </AssemblyAttribute>
+            <AssemblyAttribute Include="AssemblyData">
+                <_Parameter1>AppVeyor_JobId</_Parameter1>
+                <_Parameter2>$(APPVEYOR_JOB_ID)</_Parameter2>
+            </AssemblyAttribute>
+            <AssemblyAttribute Include="AssemblyData">
+                <_Parameter1>AppVeyor_JobName</_Parameter1>
+                <_Parameter2>$(APPVEYOR_JOB_NAME)</_Parameter2>
+            </AssemblyAttribute>
+            <AssemblyAttribute Include="AssemblyData">
+                <_Parameter1>AppVeyor_JobNumber</_Parameter1>
+                <_Parameter2>$(APPVEYOR_JOB_NUMBER)</_Parameter2>
+            </AssemblyAttribute>
+            <AssemblyAttribute Include="AssemblyData">
+                <_Parameter1>AppVeyor_RepositoryName</_Parameter1>
+                <_Parameter2>$(APPVEYOR_REPO_NAME)</_Parameter2>
+            </AssemblyAttribute>
+            <AssemblyAttribute Include="AssemblyData">
+                <_Parameter1>AppVeyor_RepositoryBranch</_Parameter1>
+                <_Parameter2>$(APPVEYOR_REPO_BRANCH)</_Parameter2>
+            </AssemblyAttribute>
+            <AssemblyAttribute Include="AssemblyData">
+                <_Parameter1>AppVeyor_RepositoryCommit</_Parameter1>
+                <_Parameter2>$(APPVEYOR_REPO_COMMIT)</_Parameter2>
+            </AssemblyAttribute>
+            <AssemblyAttribute Include="AssemblyData">
+                <_Parameter1>Commit_Ref_Name</_Parameter1>
+                <_Parameter2>$(APPVEYOR_REPO_BRANCH)</_Parameter2>
+            </AssemblyAttribute>
+            <AssemblyAttribute Include="AssemblyData">
+                <_Parameter1>Commit_Sha</_Parameter1>
+                <_Parameter2>$(APPVEYOR_REPO_COMMIT)</_Parameter2>
+            </AssemblyAttribute>
+        </ItemGroup>
+    </Target>
+</Project>
