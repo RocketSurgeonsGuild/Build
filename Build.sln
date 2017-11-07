@@ -8,12 +8,36 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rocket.Surgery.Build.Information", "src\Information\Rocket.Surgery.Build.Information.csproj", "{EDA86F18-40CE-4BC5-8153-EDD838C2D7EC}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{ABD90FA8-DF32-4D98-846F-64AE83C88386}"
+	ProjectSection(SolutionItems) = preProject
+		test\Directory.Build.props = test\Directory.Build.props
+		test\Directory.Build.targets = test\Directory.Build.targets
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{7C07D738-9CED-4DFA-8D3A-4B1B63F20A9B}"
+	ProjectSection(SolutionItems) = preProject
+		src\Directory.Build.props = src\Directory.Build.props
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".config", ".config", "{591308B0-5584-4343-852F-F3C6240B17B1}"
+	ProjectSection(SolutionItems) = preProject
+		.appveyor.yml = .appveyor.yml
+		.editorconfig = .editorconfig
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+		.gitmodules = .gitmodules
+		cake.config = cake.config
+		GitReleaseManager.yaml = GitReleaseManager.yaml
+		GitVersion.yml = GitVersion.yml
+		global.json = global.json
+		NuGet.config = NuGet.config
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".build", ".build", "{09E63DBB-12D5-42CF-9D96-7C5B2CDB2081}"
+	ProjectSection(SolutionItems) = preProject
+		build.ps1 = build.ps1
+		cakefile.cake = cakefile.cake
+		Common.Build.props = Common.Build.props
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rocket.Surgery.Build.Information.Tests", "test\Information.Tests\Rocket.Surgery.Build.Information.Tests.csproj", "{B04E06A2-6B8A-41C3-8060-7FFD87A8EA3B}"
 EndProject
@@ -52,7 +76,7 @@ Global
 		{34EF2B33-BE94-40C4-8401-D068E19C42EC} = {7C07D738-9CED-4DFA-8D3A-4B1B63F20A9B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		        SolutionGuid = {08BA8ABF-EC2B-42BE-8182-99B4E39A6127}
 		SolutionGuid = {C36EF4E4-5843-4A0F-B776-C273354C69F8}
+		        SolutionGuid = {08BA8ABF-EC2B-42BE-8182-99B4E39A6127}
 	EndGlobalSection
 EndGlobal

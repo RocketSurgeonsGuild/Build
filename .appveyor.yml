@@ -1,4 +1,6 @@
 image: Visual Studio 2017
+init:
+  - git config --global core.autocrlf input
 build_script:
   - ps: .\build.ps1
 test: off
@@ -34,7 +36,7 @@ deploy:
   - provider: NuGet
     api_key:
       secure: 0v8N4paitMtyZbuSL1LwNREpUVIrpoVTGHD1lUmSm3Rb5UBIuYpjoMSFy14JrTPl
-    skip_symbols: false
+    skip_symbols: true
     artifact: /.*\.nupkg/
     on:
       appveyor_repo_tag: true

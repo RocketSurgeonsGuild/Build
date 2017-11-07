@@ -25,21 +25,17 @@ Task("Build")
     .IsDependentOn("Restore")
     .DoesForEach(GetFiles("*.sln"), (sln) =>
     {
-		DotNetCoreBuild(sln.FullPath, new DotNetCoreBuildSettings() { Configuration = configuration, EnvironmentVariables = GitVersionEnvironmentVariables });
+        DotNetCoreBuild(sln.FullPath, new DotNetCoreBuildSettings() { Configuration = configuration, EnvironmentVariables = GitVersionEnvironmentVariables });
     });
 
-Task("TestSetup")
+Task("Test")
+    .IsDependentOn("Build")
     .Does(() => {
         CleanDirectory(artifacts + "/tests");
         CleanDirectory(artifacts + "/coverage");
         EnsureDirectoryExists(artifacts + "/tests");
         EnsureDirectoryExists(artifacts + "/coverage");
-    });
-
-Task("Test")
-    .WithCriteria(IsRunningOnWindows)
-    .IsDependentOn("TestSetup")
-    .IsDependentOn("Build")
+    })
     .DoesForEach(GetFiles("test/*/*.csproj"), (testProject) =>
 {
     DotCoverCover(tool => {
