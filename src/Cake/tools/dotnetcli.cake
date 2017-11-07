@@ -90,6 +90,8 @@ Task("DotnetCoreTest")
         var total =  XmlPeek(Artifact("report/coverage/index.xml"), "/Root/@TotalStatements");
         var coverage = double.Parse(covered) / double.Parse(total);
         Information($"Code coverage: {coverage.ToString("P2")}");
+
+        CleanBom(Artifact("report/coverage/index.xml"));
     });
 
 Task("DotnetCorePack")

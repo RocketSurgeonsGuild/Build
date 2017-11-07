@@ -1,8 +1,8 @@
 #tool "nuget:?package=GitVersion.CommandLine&prerelease"
 
-Task("UpdateAssemblyInfo")
+Task("GitVersion")
     .WithCriteria(!BuildSystem.IsLocalBuild)
-    .WithCriteria(FileExists("./GitVersion.yml"))
+    .WithCriteria(FileExists("GitVersion.yml"))
     .Does(() =>{
     var gv = GitVersion(new GitVersionSettings() {
         UpdateAssemblyInfo = true,
