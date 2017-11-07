@@ -9,7 +9,7 @@ after_build:
 artifacts:
   - path: ./artifacts/nuget/*.nupkg
 cache:
-  - tools -> tools/packages.config
+  - tools -> build.cake, tools/packages.config
 nuget:
   project_feed: true
 deploy:

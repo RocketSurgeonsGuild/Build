@@ -1,5 +1,5 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-    <Import Project="..\Information\build\Rocket.Surgery.Build.Information.props" />
+    <Import Project="..\Metadata\build\Rocket.Surgery.Build.Metadata.props" />
     <PropertyGroup>
         <TargetFrameworks>netstandard2.0;net461;net46</TargetFrameworks>
     </PropertyGroup>
@@ -11,5 +11,5 @@
         <PackageReference Include="Cake.Core" Version="0.23.0" />
         <PackageReference Include="semver" Version="2.0.4" />
     </ItemGroup>
-    <Import Project="..\Information\build\Rocket.Surgery.Build.Information.targets" />
+    <Import Project="..\Metadata\build\Rocket.Surgery.Build.Metadata.targets" />
 </Project>
