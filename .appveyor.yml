@@ -33,7 +33,7 @@ deploy:
       appveyor_repo_tag: true
   - provider: NuGet
     api_key:
-      secure: 3yqE6ans14y+09N4kca55IFCcVw7C+w5LXYzw7ItfAg4pu9Q8Iz2kaEO2w9sTzMy
+      secure: 0v8N4paitMtyZbuSL1LwNREpUVIrpoVTGHD1lUmSm3Rb5UBIuYpjoMSFy14JrTPl
     skip_symbols: false
     artifact: /.*\.nupkg/
     on:
