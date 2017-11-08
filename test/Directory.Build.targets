@@ -5,4 +5,9 @@
         <PackageReference Include="FluentAssertions" Version="$(FluentAssertions_Version)" />
         <DotNetCliToolReference Include="dotnet-xunit" Version="$(xunit_Version)" />
     </ItemGroup>
+    <ItemGroup>
+        <Content Include="xunit.runner.json">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+    </ItemGroup>
 </Project>
