@@ -6,7 +6,7 @@
         <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
     </PropertyGroup>
     <ItemGroup>
-        <PackageReference Include="SourceLink.Create.CommandLine" Version="2.4.0" PrivateAssets="All" />
-        <DotNetCliToolReference Include="dotnet-sourcelink" Version="2.4.0" />
+        <PackageReference Include="SourceLink.Create.CommandLine" Version="$(SourceLink_Version)" PrivateAssets="All" />
+        <DotNetCliToolReference Include="dotnet-sourcelink" Version="$(SourceLink_Version)" />
     </ItemGroup>
 </Project>
