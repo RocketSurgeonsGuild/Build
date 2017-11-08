@@ -1,4 +1,4 @@
-# Rocket Surgeons Guild Build [![Build status](https://ci.appveyor.com/api/projects/status/kc7f36cbo4bo1nij/branch/master?svg=true)](https://ci.appveyor.com/project/david-driscoll/conventions) [![codecov](https://codecov.io/gh/RocketSurgeonsGuild/Conventions/branch/master/graph/badge.svg)](https://codecov.io/gh/RocketSurgeonsGuild/Conventions)
+# Rocket Surgeons Guild Build [![Build status](https://ci.appveyor.com/api/projects/status/0jgtcj4rsmusu3py?svg=true)](https://ci.appveyor.com/project/david-driscoll/build) [![codecov](https://codecov.io/gh/RocketSurgeonsGuild/Build/branch/master/graph/badge.svg)](https://codecov.io/gh/RocketSurgeonsGuild/Build)
 These are a set of helper libraries that will add extra information at compile time to your assemblies.
 
 This information can be used to help disagnose and determine any issues that may be related to different versions of different assemblies across your echo system.
