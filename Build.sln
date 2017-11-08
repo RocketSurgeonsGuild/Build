@@ -26,7 +26,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".config", ".config", "{5913
 		.gitignore = .gitignore
 		.gitmodules = .gitmodules
 		cake.config = cake.config
-		GitReleaseManager.yaml = GitReleaseManager.yaml
 		GitVersion.yml = GitVersion.yml
 		global.json = global.json
 		NuGet.config = NuGet.config
@@ -76,7 +75,7 @@ Global
 		{34EF2B33-BE94-40C4-8401-D068E19C42EC} = {7C07D738-9CED-4DFA-8D3A-4B1B63F20A9B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {C36EF4E4-5843-4A0F-B776-C273354C69F8}
 		        SolutionGuid = {08BA8ABF-EC2B-42BE-8182-99B4E39A6127}
+		SolutionGuid = {C36EF4E4-5843-4A0F-B776-C273354C69F8}
 	EndGlobalSection
 EndGlobal
