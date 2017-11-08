@@ -1,6 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
-        <TargetFrameworks>netstandard1.4;net45</TargetFrameworks>
+        <TargetFrameworks>netstandard1.3;net451</TargetFrameworks>
     </PropertyGroup>
     <ItemGroup>
         <PackageReference Include="Rocket.Surgery.Build.Metadata" Version="$(RSG_Build_Version)" PrivateAssets="All" />
