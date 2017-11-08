@@ -1,4 +1,5 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
+    <Import Project="..\Metadata\build\Rocket.Surgery.Build.Metadata.props" />
     <PropertyGroup>
         <TargetFrameworks>netstandard2.0;net461;net46</TargetFrameworks>
     </PropertyGroup>
@@ -9,6 +10,6 @@
         <PackageReference Include="semver" Version="2.0.4" />
         <PackageReference Include="Cake.Common" Version="$(Cake_Version)" />
         <PackageReference Include="Cake.Core" Version="$(Cake_Version)" />
-        <PackageReference Include="Rocket.Surgery.Build.Metadata" Version="$(RSG_Build_Version)" PrivateAssets="All" />
     </ItemGroup>
+    <Import Project="..\Metadata\build\Rocket.Surgery.Build.Metadata.targets" />
 </Project>

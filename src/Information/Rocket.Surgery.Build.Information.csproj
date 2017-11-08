@@ -1,8 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
+    <Import Project="..\Metadata\build\Rocket.Surgery.Build.Metadata.props" />
     <PropertyGroup>
         <TargetFrameworks>netstandard1.3;net451</TargetFrameworks>
     </PropertyGroup>
-    <ItemGroup>
-        <PackageReference Include="Rocket.Surgery.Build.Metadata" Version="$(RSG_Build_Version)" PrivateAssets="All" />
-    </ItemGroup>
+    <Import Project="..\Metadata\build\Rocket.Surgery.Build.Metadata.targets" />
 </Project>

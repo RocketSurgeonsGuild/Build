@@ -54,6 +54,8 @@ Task("DotnetCoreTest")
                 TargetWorkingDir = file.GetDirectory(),
                 EnvironmentVariables = GitVersionEnvironmentVariables(),
             }
+            .WithAttributeFilter("System.Runtime.CompilerServices.CompilerGeneratedAttribute")
+            .WithAttributeFilter("System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute")
             .WithFilter("+:Rocket.*")
             .WithFilter("-:*.Tests")
         );
