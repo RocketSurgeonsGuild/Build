@@ -41,6 +41,10 @@ namespace Rocket.Surgery.Build.Cake
                     { "GitVersion_CommitsSinceVersionSource", gv.CommitsSinceVersionSource.ToString() },
                     { "GitVersion_CommitsSinceVersionSourcePadded", gv.CommitsSinceVersionSourcePadded },
                     { "GitVersion_CommitDate", gv.CommitDate },
+                    { "PackageVersion" , gv.NuGetVersion },
+                    { "AssemblyVersion", gv.Major + "0.0.0" },
+                    { "FileVersion", gv.AssemblySemVer },
+                    { "InformationalVersion", gv.InformationalVersion },
                 };
             }
             return __GitVersionEnvironmentVariables__;
