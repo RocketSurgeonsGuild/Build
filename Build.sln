@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27019.1
+VisualStudioVersion = 15.0.27102.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rocket.Surgery.Build.Information", "src\Information\Rocket.Surgery.Build.Information.csproj", "{EDA86F18-40CE-4BC5-8153-EDD838C2D7EC}"
 EndProject
@@ -23,6 +23,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".config", ".config", "{5913
 		.gitattributes = .gitattributes
 		.gitignore = .gitignore
 		.gitmodules = .gitmodules
+		.travis.yml = .travis.yml
 		cake.config = cake.config
 		GitVersion.yml = GitVersion.yml
 		global.json = global.json
@@ -68,7 +69,7 @@ Global
 		{34EF2B33-BE94-40C4-8401-D068E19C42EC} = {7C07D738-9CED-4DFA-8D3A-4B1B63F20A9B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {C36EF4E4-5843-4A0F-B776-C273354C69F8}
 		        SolutionGuid = {08BA8ABF-EC2B-42BE-8182-99B4E39A6127}
+		SolutionGuid = {C36EF4E4-5843-4A0F-B776-C273354C69F8}
 	EndGlobalSection
 EndGlobal
