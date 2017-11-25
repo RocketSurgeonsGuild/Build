@@ -3,11 +3,15 @@ using System.Reflection;
 using FluentAssertions;
 using Xunit;
 using Rocket.Surgery.Build.Information;
+using Rocket.Surgery.Extensions.Testing;
+using Xunit.Abstractions;
 
 namespace Rocket.Surgery.Build.Information.Tests
 {
-    public class GitVersionTests
+    public class GitVersionTests : AutoTestBase
     {
+        public GitVersionTests(ITestOutputHelper outputHelper) : base(outputHelper) { }
+
         [Fact]
         public void ReturnsInformationForVersionedAssembly()
         {
