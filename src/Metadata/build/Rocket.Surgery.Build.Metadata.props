@@ -1,5 +1,6 @@
 ﻿<Project>
     <PropertyGroup>
+        <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
         <CoreCompileDependsOn>
             $(CoreCompileDependsOn);
             CopyAssemblyDataAttribute;

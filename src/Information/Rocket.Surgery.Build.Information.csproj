@@ -1,7 +1,5 @@
 <Project Sdk="Microsoft.NET.Sdk">
-    <Import Project="..\Metadata\build\Rocket.Surgery.Build.Metadata.props" />
     <PropertyGroup>
         <TargetFrameworks>netstandard1.3;net451</TargetFrameworks>
     </PropertyGroup>
-    <Import Project="..\Metadata\build\Rocket.Surgery.Build.Metadata.targets" />
 </Project>
