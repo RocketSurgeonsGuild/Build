@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using System.Reflection;
 
 namespace Rocket.Surgery.Build.Information
@@ -16,7 +17,7 @@ namespace Rocket.Surgery.Build.Information
                     property.PropertyType == typeof(string))
                 {
                     var prefix = property.GetCustomAttribute<PrefixAttribute>()?.Key ?? string.Empty;
-                    var value = provider.GetValue(prefix + property.Name);
+                    var value = provider.GetValue(prefix + property.Name).FirstOrDefault();
                     if (!string.IsNullOrWhiteSpace(value))
                     {
                         property.SetValue(instance, Convert.ChangeType(value, property.PropertyType));

@@ -11,30 +11,24 @@ namespace Rocket.Surgery.Build.Information
     /// </summary>
     public class InformationProvider
     {
-        private readonly IReadOnlyDictionary<string, string> _results;
+        private readonly IReadOnlyDictionary<string, string[]> _results;
 
         public InformationProvider(Assembly assembly)
         {
-            _results = new ReadOnlyDictionary<string, string>( new Dictionary<string, string>(
-                assembly
-                    .GetCustomAttributes()
-                    .Where(x => x.GetType().Name == nameof(AssemblyDataAttribute))
-                    .Select(x =>
-                    {
-                        var type = x.GetType().GetTypeInfo();
-                        return new KeyValuePair<string, string>(type.GetDeclaredProperty("Key").GetValue(x) as string,type.GetDeclaredProperty("Value").GetValue(x) as string);
-                    })
+            var value =  assembly
+                    .GetCustomAttributes<AssemblyMetadataAttribute>()
+                    .GroupBy(x => x.Key, StringComparer.OrdinalIgnoreCase)
                     .ToDictionary(
                         x => x.Key,
-                        x => x.Value,
-                        StringComparer.OrdinalIgnoreCase
-                    )));
+                        x => x.Select(z => z.Value).ToArray()
+                    );
+            _results = new ReadOnlyDictionary<string, string[]>(value);
         }
 
-        public string GetValue(string key)
+        public string[] GetValue(string key)
         {
             _results.TryGetValue(key, out var result);
-            return result;
+            return result ?? new string[0];
         }
 
         public bool HasPrefix(string key)

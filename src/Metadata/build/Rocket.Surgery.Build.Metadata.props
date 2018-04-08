@@ -2,7 +2,6 @@
     <PropertyGroup>
         <CoreCompileDependsOn>
             $(CoreCompileDependsOn);
-            CopyAssemblyDataAttribute;
         </CoreCompileDependsOn>
     </PropertyGroup>
     <Import Project="$(MSBuildThisFileDirectory)\gitversion.props" />

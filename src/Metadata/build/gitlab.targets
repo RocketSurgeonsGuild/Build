@@ -1,59 +1,59 @@
 ﻿<Project>
     <Target Name="AddGitlabAttributes" BeforeTargets="CoreCompile" Condition="'$(GITLAB_CI)'!=''">
         <ItemGroup>
-            <AssemblyAttribute Include="AssemblyData">
+            <AssemblyAttribute Include="System.Reflection.AssemblyMetadata">
                 <_Parameter1>Commit_Sha</_Parameter1>
                 <_Parameter2>$(GITLAB_COMMIT_SHA)</_Parameter2>
             </AssemblyAttribute>
-            <AssemblyAttribute Include="AssemblyData">
+            <AssemblyAttribute Include="System.Reflection.AssemblyMetadata">
                 <_Parameter1>Commit_Before_Sha</_Parameter1>
                 <_Parameter2>$(GITLAB_COMMIT_BEFORE_SHA)</_Parameter2>
             </AssemblyAttribute>
-            <AssemblyAttribute Include="AssemblyData">
+            <AssemblyAttribute Include="System.Reflection.AssemblyMetadata">
                 <_Parameter1>Commit_Ref_Name</_Parameter1>
                 <_Parameter2>$(GITLAB_COMMIT_REF_NAME)</_Parameter2>
             </AssemblyAttribute>
-            <AssemblyAttribute Include="AssemblyData">
+            <AssemblyAttribute Include="System.Reflection.AssemblyMetadata">
                 <_Parameter1>GitLab_Commit_Sha</_Parameter1>
                 <_Parameter2>$(GITLAB_COMMIT_SHA)</_Parameter2>
             </AssemblyAttribute>
-            <AssemblyAttribute Include="AssemblyData">
+            <AssemblyAttribute Include="System.Reflection.AssemblyMetadata">
                 <_Parameter1>GitLab_Commit_Before_Sha</_Parameter1>
                 <_Parameter2>$(GITLAB_COMMIT_BEFORE_SHA)</_Parameter2>
             </AssemblyAttribute>
-            <AssemblyAttribute Include="AssemblyData">
+            <AssemblyAttribute Include="System.Reflection.AssemblyMetadata">
                 <_Parameter1>GitLab_Commit_Ref_Name</_Parameter1>
                 <_Parameter2>$(GITLAB_COMMIT_REF_NAME)</_Parameter2>
             </AssemblyAttribute>
-            <AssemblyAttribute Include="AssemblyData">
+            <AssemblyAttribute Include="System.Reflection.AssemblyMetadata">
                 <_Parameter1>GitLab_JobId</_Parameter1>
                 <_Parameter2>$(GITLAB_JOB_ID)</_Parameter2>
             </AssemblyAttribute>
-            <AssemblyAttribute Include="AssemblyData">
+            <AssemblyAttribute Include="System.Reflection.AssemblyMetadata">
                 <_Parameter1>GitLab_ProjectId</_Parameter1>
                 <_Parameter2>$(GITLAB_PROJECT_ID)</_Parameter2>
             </AssemblyAttribute>
-            <AssemblyAttribute Include="AssemblyData">
+            <AssemblyAttribute Include="System.Reflection.AssemblyMetadata">
                 <_Parameter1>GitLab_ProjectName</_Parameter1>
                 <_Parameter2>$(GITLAB_PROJECT_NAME)</_Parameter2>
             </AssemblyAttribute>
-            <AssemblyAttribute Include="AssemblyData">
+            <AssemblyAttribute Include="System.Reflection.AssemblyMetadata">
                 <_Parameter1>GitLab_ProjectPath</_Parameter1>
                 <_Parameter2>$(GITLAB_PROJECT_PATH)</_Parameter2>
             </AssemblyAttribute>
-            <AssemblyAttribute Include="AssemblyData">
+            <AssemblyAttribute Include="System.Reflection.AssemblyMetadata">
                 <_Parameter1>GitLab_ProjectNamespace</_Parameter1>
                 <_Parameter2>$(GITLAB_PROJECT_NAMESPACE)</_Parameter2>
             </AssemblyAttribute>
-            <AssemblyAttribute Include="AssemblyData">
+            <AssemblyAttribute Include="System.Reflection.AssemblyMetadata">
                 <_Parameter1>GitLab_ProjectUrl</_Parameter1>
                 <_Parameter2>$(GITLAB_PROJECT_URL)</_Parameter2>
             </AssemblyAttribute>
-            <AssemblyAttribute Include="AssemblyData">
+            <AssemblyAttribute Include="System.Reflection.AssemblyMetadata">
                 <_Parameter1>GitLab_PipelineId</_Parameter1>
                 <_Parameter2>$(GITLAB_PIPELINE_ID)</_Parameter2>
             </AssemblyAttribute>
-            <AssemblyAttribute Include="AssemblyData">
+            <AssemblyAttribute Include="System.Reflection.AssemblyMetadata">
                 <_Parameter1>GitLab_RunnerId</_Parameter1>
                 <_Parameter2>$(GITLAB_RUNNER_ID)</_Parameter2>
             </AssemblyAttribute>
