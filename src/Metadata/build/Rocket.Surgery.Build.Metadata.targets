@@ -2,4 +2,5 @@
     <Import Project="$(MSBuildThisFileDirectory)\gitversion.targets" />
     <Import Project="$(MSBuildThisFileDirectory)\gitlab.targets" />
     <Import Project="$(MSBuildThisFileDirectory)\appveyor.targets" />
+    <Import Project="$(MSBuildThisFileDirectory)\vsts.targets" />
 </Project>

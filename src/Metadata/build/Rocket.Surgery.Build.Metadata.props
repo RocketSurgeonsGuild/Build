@@ -7,4 +7,5 @@
     <Import Project="$(MSBuildThisFileDirectory)\gitversion.props" />
     <Import Project="$(MSBuildThisFileDirectory)\gitlab.props" />
     <Import Project="$(MSBuildThisFileDirectory)\appveyor.props" />
+    <Import Project="$(MSBuildThisFileDirectory)\vsts.props" />
 </Project>
