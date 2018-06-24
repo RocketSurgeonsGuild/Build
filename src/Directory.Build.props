@@ -8,6 +8,5 @@
     <ItemGroup>
         <PackageReference Include="SourceLink.Create.CommandLine" Version="$(SourceLink_Version)" PrivateAssets="All" />
 		<PackageReference Include="SourceLink.Copy.PdbFiles" Version="$(SourceLink_Version)" PrivateAssets="All" />
-        <DotNetCliToolReference Include="dotnet-sourcelink" Version="$(SourceLink_Version)" />
     </ItemGroup>
 </Project>
