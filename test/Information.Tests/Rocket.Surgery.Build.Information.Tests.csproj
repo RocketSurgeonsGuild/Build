@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
     <Import Project="..\..\src\Metadata\build\Rocket.Surgery.Build.Metadata.props" />
     <PropertyGroup>
-        <TargetFrameworks>netcoreapp2.0</TargetFrameworks>
+        <TargetFrameworks>netcoreapp2.0;netcoreapp2.1;netcoreapp2.2</TargetFrameworks>
         <GitVersion_SemVer Condition="'$(GitVersion_SemVer)' == ''">testing1234</GitVersion_SemVer>
     </PropertyGroup>
     <ItemGroup>
