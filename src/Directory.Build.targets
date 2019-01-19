@@ -1,8 +1,4 @@
 <Project>
     <Import Project=".\Metadata\build\Rocket.Surgery.Build.Metadata.targets" />
-    <ItemGroup>
-        <PackageReference Include="Microsoft.SourceLink.Vsts.Git" />
-        <PackageReference Include="Microsoft.SourceLink.GitHub" />
-    </ItemGroup>
     <Import Project="$([MSBuild]::GetPathOfFileAbove('Common.Build.targets', '$(MSBuildThisFileDirectory)../'))" />
 </Project>

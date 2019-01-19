@@ -5,6 +5,6 @@
             AddVstsAttributes;
         </CoreCompileDependsOn>
 
-        <RepositoryUrl>$(BUILD_REPOSITORY_URI)</RepositoryUrl>
+        <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
     </PropertyGroup>
 </Project>

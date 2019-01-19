@@ -5,7 +5,6 @@
             AddGitVersionAttributes;
         </CoreCompileDependsOn>
 
-        <RepositoryType>git</RepositoryType>
         <PackageVersion>$(GitVersion_SemVer)</PackageVersion>
         <AssemblyVersion Condition="'$(GitVersion_Major)'!=''">$(GitVersion_Major).0.0.0</AssemblyVersion>
         <FileVersion>$(GitVersion_AssemblySemVer)</FileVersion>

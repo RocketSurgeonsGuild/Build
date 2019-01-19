@@ -5,6 +5,6 @@
             AddGitlabAttributes;
         </CoreCompileDependsOn>
 
-        <RepositoryUrl>$(GITLAB_PROJECT_URL)</RepositoryUrl>
+        <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
     </PropertyGroup>
 </Project>

@@ -4,6 +4,7 @@
             $(CoreCompileDependsOn);
         </CoreCompileDependsOn>
     </PropertyGroup>
+    <Import Project="$(MSBuildThisFileDirectory)\sourcelink.props" />
     <Import Project="$(MSBuildThisFileDirectory)\gitversion.props" />
     <Import Project="$(MSBuildThisFileDirectory)\gitlab.props" />
     <Import Project="$(MSBuildThisFileDirectory)\appveyor.props" />
