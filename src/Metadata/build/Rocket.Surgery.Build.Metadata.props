@@ -1,8 +1,6 @@
 ﻿<Project>
     <PropertyGroup>
-        <CoreCompileDependsOn>
-            $(CoreCompileDependsOn);
-        </CoreCompileDependsOn>
+        <ContinuousIntegrationBuild>false</ContinuousIntegrationBuild>
     </PropertyGroup>
     <Import Project="$(MSBuildThisFileDirectory)\sourcelink.props" />
     <Import Project="$(MSBuildThisFileDirectory)\gitversion.props" />
