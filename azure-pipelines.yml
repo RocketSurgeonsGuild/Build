@@ -19,7 +19,7 @@ resources:
 
 variables:
   Configuration: Release
-  Verbosity: Normal
+  Verbosity: Verbose
   DotNetVersion: "2.2.300"
   DotNet3Version: "3.0.100-preview5-011568"
   CakeVersion: "0.33.0"
