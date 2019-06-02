@@ -3,6 +3,7 @@
     <PropertyGroup>
         <PreserveCompilationContext>true</PreserveCompilationContext>
         <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
+        <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
         <Include></Include>
         <Exclude></Exclude>
         <IncludeTestAssembly>true</IncludeTestAssembly>
