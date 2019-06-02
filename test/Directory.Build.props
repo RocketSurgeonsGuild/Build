@@ -4,11 +4,6 @@
         <PreserveCompilationContext>true</PreserveCompilationContext>
         <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
         <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
-        <Include></Include>
-        <Exclude></Exclude>
-        <IncludeTestAssembly>true</IncludeTestAssembly>
-        <VSTestVerbosity>Diagnostic</VSTestVerbosity>
-        <Verbosity>Diagnostic</Verbosity>
-        <!-- <IncludeDirectory>$(MSBuildProjectDirectory)\bin\$(Configuration)\$(TargetFramework)\</IncludeDirectory> -->
+        <Include>[Rocket.Surgery.*]*</Include>
     </PropertyGroup>
 </Project>
