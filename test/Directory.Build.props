@@ -5,7 +5,7 @@
         <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
         <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
         <!-- <Include></Include> -->
-        <Exclude>[Bogus*]*,[Autofac.*]*,[FakeItEasy*]*,[xunit*]*,[Microsoft.*]*,[XunitXml*]*,[coverlet.*]*,[System.*]*</Exclude>
+        <Exclude></Exclude>
         <IncludeTestAssembly>true</IncludeTestAssembly>
         <!-- <IncludeDirectory>$(MSBuildProjectDirectory)\bin\$(Configuration)\$(TargetFramework)\</IncludeDirectory> -->
     </PropertyGroup>
