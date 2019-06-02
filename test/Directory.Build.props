@@ -7,6 +7,6 @@
         <!-- <Include></Include>
         <Exclude></Exclude> -->
         <IncludeTestAssembly>true</IncludeTestAssembly>
-        <!-- <IncludeDirectory>$(MSBuildProjectDirectory)\bin\$(Configuration)\$(TargetFramework)\</IncludeDirectory> -->
+        <IncludeDirectory>$(MSBuildProjectDirectory)\bin\$(Configuration)\$(TargetFramework)\</IncludeDirectory>
     </PropertyGroup>
 </Project>
