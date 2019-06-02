@@ -4,9 +4,5 @@
         <PreserveCompilationContext>true</PreserveCompilationContext>
         <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
         <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
-        <Include></Include>
-        <Exclude></Exclude>
-        <IncludeTestAssembly>true</IncludeTestAssembly>
-        <IncludeDirectory>$(MSBuildProjectDirectory)\bin\$(Configuration)\$(TargetFramework)\</IncludeDirectory>
     </PropertyGroup>
 </Project>
