@@ -3,6 +3,8 @@
     <PropertyGroup>
         <PreserveCompilationContext>true</PreserveCompilationContext>
         <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
-        <!-- <Include>[Rocket.Surgery.*]*</Include> -->
+        <Include></Include>
+        <Exclude></Exclude>
+        <IncludeTestAssembly>true</IncludeTestAssembly>
     </PropertyGroup>
 </Project>
