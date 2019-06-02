@@ -6,5 +6,6 @@
         <Include></Include>
         <Exclude></Exclude>
         <IncludeTestAssembly>true</IncludeTestAssembly>
+        <IncludeDirectory>$(MSBuildProjectDirectory)\$(OutputPath)</IncludeDirectory>
     </PropertyGroup>
 </Project>
