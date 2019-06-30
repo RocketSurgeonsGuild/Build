@@ -4,8 +4,17 @@ using System.Reflection;
 
 namespace Rocket.Surgery.Build.Information
 {
+    /// <summary>
+    /// Class PrefixExtensions.
+    /// </summary>
     static class PrefixExtensions
     {
+        /// <summary>
+        /// Infers the specified instance.
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="provider">The provider.</param>
+        /// <param name="instance">The instance.</param>
         internal static void Infer<T>(this InformationProvider provider, T instance)
         {
             foreach (var property in instance.GetType().GetTypeInfo().DeclaredProperties)

@@ -9,8 +9,10 @@ using System.Xml.Linq;
 namespace Rocket.Surgery.Build.Information
 {
     /// <summary>
-    /// Class GitVersion.
+    /// GitVersion.
+    /// Implements the <see cref="System.IEquatable{Rocket.Surgery.Build.Information.GitVersion}" />
     /// </summary>
+    /// <seealso cref="System.IEquatable{Rocket.Surgery.Build.Information.GitVersion}" />
     /// <seealso cref="IEquatable{GitVersion}" />
     public class GitVersion : IEquatable<GitVersion>
     {
@@ -119,6 +121,7 @@ namespace Rocket.Surgery.Build.Information
         /// <summary>
         /// Does this assembly has any of these attributes?
         /// </summary>
+        /// <value><c>true</c> if this instance has version; otherwise, <c>false</c>.</value>
         public bool HasVersion => _information.HasPrefix("GitVersion_");
 
         /// <summary>
@@ -235,13 +238,24 @@ namespace Rocket.Surgery.Build.Information
         /// <summary>
         /// Gets the repository url.
         /// </summary>
+        /// <value>The repository URL.</value>
         public string RepositoryUrl { get; private set; }
 
+        /// <summary>
+        /// Determines whether the specified <see cref="System.Object" /> is equal to this instance.
+        /// </summary>
+        /// <param name="obj">The object to compare with the current object.</param>
+        /// <returns><c>true</c> if the specified <see cref="System.Object" /> is equal to this instance; otherwise, <c>false</c>.</returns>
         public override bool Equals(object obj)
         {
             return Equals(obj as GitVersion);
         }
 
+        /// <summary>
+        /// Indicates whether the current object is equal to another object of the same type.
+        /// </summary>
+        /// <param name="other">An object to compare with this object.</param>
+        /// <returns>true if the current object is equal to the <paramref name="other" /> parameter; otherwise, false.</returns>
         public bool Equals(GitVersion other)
         {
             return other != null &&
@@ -256,6 +270,10 @@ namespace Rocket.Surgery.Build.Information
                    CommitDate == other.CommitDate;
         }
 
+        /// <summary>
+        /// Returns a hash code for this instance.
+        /// </summary>
+        /// <returns>A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.</returns>
         public override int GetHashCode()
         {
             var hashCode = -1073977946;
@@ -271,11 +289,23 @@ namespace Rocket.Surgery.Build.Information
             return hashCode;
         }
 
+        /// <summary>
+        /// Implements the == operator.
+        /// </summary>
+        /// <param name="version1">The version1.</param>
+        /// <param name="version2">The version2.</param>
+        /// <returns>The result of the operator.</returns>
         public static bool operator ==(GitVersion version1, GitVersion version2)
         {
             return EqualityComparer<GitVersion>.Default.Equals(version1, version2);
         }
 
+        /// <summary>
+        /// Implements the != operator.
+        /// </summary>
+        /// <param name="version1">The version1.</param>
+        /// <param name="version2">The version2.</param>
+        /// <returns>The result of the operator.</returns>
         public static bool operator !=(GitVersion version1, GitVersion version2)
         {
             return !(version1 == version2);

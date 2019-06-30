@@ -13,6 +13,10 @@ namespace Rocket.Surgery.Build.Information
     {
         private readonly IReadOnlyDictionary<string, string[]> _results;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="InformationProvider"/> class.
+        /// </summary>
+        /// <param name="assembly">The assembly.</param>
         public InformationProvider(Assembly assembly)
         {
             var value =  assembly
@@ -25,12 +29,22 @@ namespace Rocket.Surgery.Build.Information
             _results = new ReadOnlyDictionary<string, string[]>(value);
         }
 
+        /// <summary>
+        /// Gets the value.
+        /// </summary>
+        /// <param name="key">The key.</param>
+        /// <returns>System.String[].</returns>
         public string[] GetValue(string key)
         {
             _results.TryGetValue(key, out var result);
             return result ?? new string[0];
         }
 
+        /// <summary>
+        /// Determines whether the specified key has prefix.
+        /// </summary>
+        /// <param name="key">The key.</param>
+        /// <returns><c>true</c> if the specified key has prefix; otherwise, <c>false</c>.</returns>
         public bool HasPrefix(string key)
         {
             return _results.Keys.Any(z => z.StartsWith(key, StringComparison.OrdinalIgnoreCase));
