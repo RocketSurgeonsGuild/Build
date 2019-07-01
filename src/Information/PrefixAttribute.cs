@@ -3,7 +3,7 @@ using System;
 namespace Rocket.Surgery.Build.Information
 {
     /// <summary>
-    /// Class PrefixAttribute.
+    /// PrefixAttribute.
     /// Implements the <see cref="System.Attribute" />
     /// </summary>
     /// <seealso cref="System.Attribute" />

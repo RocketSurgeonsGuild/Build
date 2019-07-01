@@ -5,7 +5,7 @@ using System.Reflection;
 namespace Rocket.Surgery.Build.Information
 {
     /// <summary>
-    /// Class PrefixExtensions.
+    /// PrefixExtensions.
     /// </summary>
     static class PrefixExtensions
     {
