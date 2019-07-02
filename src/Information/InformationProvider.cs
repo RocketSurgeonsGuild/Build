@@ -34,10 +34,10 @@ namespace Rocket.Surgery.Build.Information
         /// </summary>
         /// <param name="key">The key.</param>
         /// <returns>System.String[].</returns>
-        public string[] GetValue(string key)
+        public IEnumerable<string> GetValue(string key)
         {
             _results.TryGetValue(key, out var result);
-            return result ?? new string[0];
+            return result ?? Array.Empty<string>();
         }
 
         /// <summary>

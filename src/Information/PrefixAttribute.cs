@@ -8,7 +8,7 @@ namespace Rocket.Surgery.Build.Information
     /// </summary>
     /// <seealso cref="System.Attribute" />
     [AttributeUsage(AttributeTargets.Property)]
-    class PrefixAttribute : Attribute
+    internal class PrefixAttribute : Attribute
     {
         /// <summary>
         /// Gets the key.

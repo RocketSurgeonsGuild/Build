@@ -1,9 +1,15 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
         <TargetFrameworks>netstandard1.3</TargetFrameworks>
     </PropertyGroup>
     <ItemGroup>
         <None Include="build/*.*" Pack="true" PackagePath="build" />
         <None Include="buildMultiTargeting/*.*" Pack="true" PackagePath="buildMultiTargeting" />
+    </ItemGroup>
+    <ItemGroup>
+      <Compile Remove="**\*.cs" />
+    </ItemGroup>
+    <ItemGroup>
+      <Content Include="jetbrains\JetBrains.Annotations.cs" PackagePath="jetbrains\" />
     </ItemGroup>
 </Project>

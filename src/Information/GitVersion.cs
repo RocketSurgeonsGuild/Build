@@ -5,14 +5,14 @@ using System.Linq.Expressions;
 using System.Reflection;
 using System.Text;
 using System.Xml.Linq;
+using JetBrains.Annotations;
 
 namespace Rocket.Surgery.Build.Information
 {
     /// <summary>
     /// GitVersion.
-    /// Implements the <see cref="System.IEquatable{Rocket.Surgery.Build.Information.GitVersion}" />
+    /// Implements the <see cref="IEquatable{GitVersion}" />
     /// </summary>
-    /// <seealso cref="System.IEquatable{Rocket.Surgery.Build.Information.GitVersion}" />
     /// <seealso cref="IEquatable{GitVersion}" />
     public class GitVersion : IEquatable<GitVersion>
     {
@@ -32,7 +32,7 @@ namespace Rocket.Surgery.Build.Information
         /// Fors the specified assemblies.
         /// </summary>
         /// <param name="assemblies">The assemblies.</param>
-        /// <returns>IDictionary&lt;Assembly, GitVersion&gt;.</returns>
+        /// <returns>IDictionary{Assembly, GitVersion}.</returns>
         public static IDictionary<Assembly, GitVersion> For(IEnumerable<Assembly> assemblies)
         {
             return assemblies.Distinct().ToDictionary(x => x, For);
@@ -42,7 +42,7 @@ namespace Rocket.Surgery.Build.Information
         /// Fors the specified assemblies.
         /// </summary>
         /// <param name="assemblies">The assemblies.</param>
-        /// <returns>IDictionary&lt;Assembly, GitVersion&gt;.</returns>
+        /// <returns>IDictionary{Assembly, GitVersion}.</returns>
         public static IDictionary<Assembly, GitVersion> For(params Assembly[] assemblies)
         {
             return assemblies.Distinct().ToDictionary(x => x, For);
@@ -62,7 +62,7 @@ namespace Rocket.Surgery.Build.Information
         /// Fors the specified types.
         /// </summary>
         /// <param name="types">The types.</param>
-        /// <returns>IDictionary&lt;Assembly, GitVersion&gt;.</returns>
+        /// <returns>IDictionary{Assembly, GitVersion}.</returns>
         public static IDictionary<Assembly, GitVersion> For(IEnumerable<Type> types)
         {
             return For(types.Select(x => x.GetTypeInfo().Assembly).Distinct());
@@ -72,7 +72,7 @@ namespace Rocket.Surgery.Build.Information
         /// Fors the specified types.
         /// </summary>
         /// <param name="types">The types.</param>
-        /// <returns>IDictionary&lt;Assembly, GitVersion&gt;.</returns>
+        /// <returns>IDictionary{Assembly, GitVersion}.</returns>
         public static IDictionary<Assembly, GitVersion> For(params Type[] types)
         {
             return For(types.Select(x => x.GetTypeInfo().Assembly).Distinct());
@@ -92,7 +92,7 @@ namespace Rocket.Surgery.Build.Information
         /// Fors the specified type infos.
         /// </summary>
         /// <param name="typeInfos">The type infos.</param>
-        /// <returns>IDictionary&lt;Assembly, GitVersion&gt;.</returns>
+        /// <returns>IDictionary{Assembly, GitVersion}.</returns>
         public static IDictionary<Assembly, GitVersion> For(IEnumerable<TypeInfo> typeInfos)
         {
             return For(typeInfos.Select(x => x.Assembly).Distinct());
@@ -102,7 +102,7 @@ namespace Rocket.Surgery.Build.Information
         /// Fors the specified type infos.
         /// </summary>
         /// <param name="typeInfos">The type infos.</param>
-        /// <returns>IDictionary&lt;Assembly, GitVersion&gt;.</returns>
+        /// <returns>IDictionary{Assembly, GitVersion}.</returns>
         public static IDictionary<Assembly, GitVersion> For(params TypeInfo[] typeInfos)
         {
             return For(typeInfos.Select(x => x.Assembly).Distinct());
@@ -128,118 +128,123 @@ namespace Rocket.Surgery.Build.Information
         /// Gets the major.
         /// </summary>
         /// <value>The major.</value>
-        [Prefix("GitVersion_")] public int Major { get; private set; }
+        [Prefix("GitVersion_"), UsedImplicitly] public int Major { get; [UsedImplicitly] private set; }
         /// <summary>
         /// Gets the minor.
         /// </summary>
         /// <value>The minor.</value>
-        [Prefix("GitVersion_")] public int Minor { get; private set; }
+        [Prefix("GitVersion_"), UsedImplicitly] public int Minor { get; [UsedImplicitly] private set; }
         /// <summary>
         /// Gets the patch.
         /// </summary>
         /// <value>The patch.</value>
-        [Prefix("GitVersion_")] public int Patch { get; private set; }
+        [Prefix("GitVersion_"), UsedImplicitly] public int Patch { get; [UsedImplicitly] private set; }
         /// <summary>
         /// Gets the pre release tag.
         /// </summary>
         /// <value>The pre release tag.</value>
-        [Prefix("GitVersion_")] public string PreReleaseTag { get; private set; }
+        [Prefix("GitVersion_"), UsedImplicitly] public string PreReleaseTag { get; [UsedImplicitly] private set; }
         /// <summary>
         /// Gets the pre release tag with dash.
         /// </summary>
         /// <value>The pre release tag with dash.</value>
-        [Prefix("GitVersion_")] public string PreReleaseTagWithDash { get; private set; }
+        [Prefix("GitVersion_"), UsedImplicitly] public string PreReleaseTagWithDash { get; [UsedImplicitly] private set; }
         /// <summary>
         /// Gets the build meta data.
         /// </summary>
         /// <value>The build meta data.</value>
-        [Prefix("GitVersion_")] public string BuildMetaData { get; private set; }
+        [Prefix("GitVersion_"), UsedImplicitly] public string BuildMetaData { get; [UsedImplicitly] private set; }
         /// <summary>
         /// Gets the build meta data padded.
         /// </summary>
         /// <value>The build meta data padded.</value>
-        [Prefix("GitVersion_")] public string BuildMetaDataPadded { get; private set; }
+        [Prefix("GitVersion_"), UsedImplicitly] public string BuildMetaDataPadded { get; [UsedImplicitly] private set; }
         /// <summary>
         /// Gets the full build meta data.
         /// </summary>
         /// <value>The full build meta data.</value>
-        [Prefix("GitVersion_")] public string FullBuildMetaData { get; private set; }
+        [Prefix("GitVersion_"), UsedImplicitly] public string FullBuildMetaData { get; [UsedImplicitly] private set; }
         /// <summary>
         /// Gets the major minor patch.
         /// </summary>
         /// <value>The major minor patch.</value>
-        [Prefix("GitVersion_")] public string MajorMinorPatch { get; private set; }
+        [Prefix("GitVersion_"), UsedImplicitly] public string MajorMinorPatch { get; [UsedImplicitly] private set; }
         /// <summary>
         /// Gets the sem ver.
         /// </summary>
         /// <value>The sem ver.</value>
-        [Prefix("GitVersion_")] public string SemVer { get; private set; }
+        [Prefix("GitVersion_"), UsedImplicitly] public string SemVer { get; [UsedImplicitly] private set; }
         /// <summary>
         /// Gets the legacy sem ver.
         /// </summary>
         /// <value>The legacy sem ver.</value>
-        [Prefix("GitVersion_")] public string LegacySemVer { get; private set; }
+        [Prefix("GitVersion_"), UsedImplicitly] public string LegacySemVer { get; [UsedImplicitly] private set; }
         /// <summary>
         /// Gets the legacy sem ver padded.
         /// </summary>
         /// <value>The legacy sem ver padded.</value>
-        [Prefix("GitVersion_")] public string LegacySemVerPadded { get; private set; }
+        [Prefix("GitVersion_"), UsedImplicitly] public string LegacySemVerPadded { get; [UsedImplicitly] private set; }
         /// <summary>
         /// Gets the assembly sem ver.
         /// </summary>
         /// <value>The assembly sem ver.</value>
-        [Prefix("GitVersion_")] public string AssemblySemVer { get; private set; }
+        [Prefix("GitVersion_"), UsedImplicitly] public string AssemblySemVer { get; [UsedImplicitly] private set; }
         /// <summary>
         /// Gets the full sem ver.
         /// </summary>
         /// <value>The full sem ver.</value>
-        [Prefix("GitVersion_")] public string FullSemVer { get; private set; }
+        [Prefix("GitVersion_"), UsedImplicitly] public string FullSemVer { get; [UsedImplicitly] private set; }
         /// <summary>
         /// Gets the informational version.
         /// </summary>
         /// <value>The informational version.</value>
-        [Prefix("GitVersion_")] public string InformationalVersion { get; private set; }
+        [Prefix("GitVersion_"), UsedImplicitly] public string InformationalVersion { get; [UsedImplicitly] private set; }
         /// <summary>
         /// Gets the name of the branch.
         /// </summary>
         /// <value>The name of the branch.</value>
-        [Prefix("GitVersion_")] public string BranchName { get; private set; }
+        [Prefix("GitVersion_"), UsedImplicitly] public string BranchName { get; [UsedImplicitly] private set; }
         /// <summary>
         /// Gets the sha.
         /// </summary>
         /// <value>The sha.</value>
-        [Prefix("GitVersion_")] public string Sha { get; private set; }
+        [Prefix("GitVersion_"), UsedImplicitly] public string Sha { get; [UsedImplicitly] private set; }
+        /// <summary>
+        /// Gets the short sha.
+        /// </summary>
+        /// <value>The short sha.</value>
+        [Prefix("GitVersion_"), UsedImplicitly] public string ShortSha { get; [UsedImplicitly] private set; }
         /// <summary>
         /// Gets the nu get version v2.
         /// </summary>
         /// <value>The nu get version v2.</value>
-        [Prefix("GitVersion_")] public string NuGetVersionV2 { get; private set; }
+        [Prefix("GitVersion_"), UsedImplicitly] public string NuGetVersionV2 { get; [UsedImplicitly] private set; }
         /// <summary>
         /// Gets the nu get version.
         /// </summary>
         /// <value>The nu get version.</value>
-        [Prefix("GitVersion_")] public string NuGetVersion { get; private set; }
+        [Prefix("GitVersion_"), UsedImplicitly] public string NuGetVersion { get; [UsedImplicitly] private set; }
         /// <summary>
         /// Gets the commits since version source.
         /// </summary>
         /// <value>The commits since version source.</value>
-        [Prefix("GitVersion_")] public int CommitsSinceVersionSource { get; private set; }
+        [Prefix("GitVersion_"), UsedImplicitly] public int CommitsSinceVersionSource { get; [UsedImplicitly] private set; }
         /// <summary>
         /// Gets the commits since version source padded.
         /// </summary>
         /// <value>The commits since version source padded.</value>
-        [Prefix("GitVersion_")] public string CommitsSinceVersionSourcePadded { get; private set; }
+        [Prefix("GitVersion_"), UsedImplicitly] public string CommitsSinceVersionSourcePadded { get; [UsedImplicitly] private set; }
         /// <summary>
         /// Gets the commit date.
         /// </summary>
         /// <value>The commit date.</value>
-        [Prefix("GitVersion_")] public string CommitDate { get; private set; }
+        [Prefix("GitVersion_"), UsedImplicitly] public string CommitDate { get; [UsedImplicitly] private set; }
 
         /// <summary>
         /// Gets the repository url.
         /// </summary>
         /// <value>The repository URL.</value>
-        public string RepositoryUrl { get; private set; }
+        [UsedImplicitly] public string RepositoryUrl { get; [UsedImplicitly] private set; }
 
         /// <summary>
         /// Determines whether the specified <see cref="System.Object" /> is equal to this instance.

@@ -1,10 +1,11 @@
 ﻿<Project>
-    <PropertyGroup>
-        <ContinuousIntegrationBuild>false</ContinuousIntegrationBuild>
-    </PropertyGroup>
-    <Import Project="$(MSBuildThisFileDirectory)\sourcelink.props" />
-    <Import Project="$(MSBuildThisFileDirectory)\gitversion.props" />
-    <Import Project="$(MSBuildThisFileDirectory)\gitlab.props" />
-    <Import Project="$(MSBuildThisFileDirectory)\appveyor.props" />
-    <Import Project="$(MSBuildThisFileDirectory)\vsts.props" />
+  <PropertyGroup>
+    <ContinuousIntegrationBuild>false</ContinuousIntegrationBuild>
+  </PropertyGroup>
+  <Import Project="$(MSBuildThisFileDirectory)\jetbrains.props" />
+  <Import Project="$(MSBuildThisFileDirectory)\sourcelink.props" />
+  <Import Project="$(MSBuildThisFileDirectory)\gitversion.props" />
+  <Import Project="$(MSBuildThisFileDirectory)\gitlab.props" />
+  <Import Project="$(MSBuildThisFileDirectory)\appveyor.props" />
+  <Import Project="$(MSBuildThisFileDirectory)\vsts.props" />
 </Project>

@@ -7,7 +7,7 @@ namespace Rocket.Surgery.Build.Information
     /// <summary>
     /// PrefixExtensions.
     /// </summary>
-    static class PrefixExtensions
+    internal static class PrefixExtensions
     {
         /// <summary>
         /// Infers the specified instance.

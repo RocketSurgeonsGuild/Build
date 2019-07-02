@@ -1,7 +1,8 @@
 ﻿<Project>
-    <Import Project="$(MSBuildThisFileDirectory)\sourcelink.targets" />
-    <Import Project="$(MSBuildThisFileDirectory)\gitversion.targets" />
-    <Import Project="$(MSBuildThisFileDirectory)\gitlab.targets" />
-    <Import Project="$(MSBuildThisFileDirectory)\appveyor.targets" />
-    <Import Project="$(MSBuildThisFileDirectory)\vsts.targets" />
+  <Import Project="$(MSBuildThisFileDirectory)\jetbrains.targets" />
+  <Import Project="$(MSBuildThisFileDirectory)\sourcelink.targets" />
+  <Import Project="$(MSBuildThisFileDirectory)\gitversion.targets" />
+  <Import Project="$(MSBuildThisFileDirectory)\gitlab.targets" />
+  <Import Project="$(MSBuildThisFileDirectory)\appveyor.targets" />
+  <Import Project="$(MSBuildThisFileDirectory)\vsts.targets" />
 </Project>
