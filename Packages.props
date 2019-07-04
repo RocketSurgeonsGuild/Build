@@ -6,7 +6,7 @@
     <GlobalPackageReference Include="Roslynator.Analyzers" Version="2.1.0-rc" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Update="Rocket.Surgery.Extensions.Testing" Version="1.1.8" />
+    <PackageReference Update="Rocket.Surgery.Extensions.Testing" Version="1.1.10" />
     <PackageReference Update="Autofac.Extras.FakeItEasy" Version="5.0.1" />
     <PackageReference Update="Bogus" Version="28.0.1" />
     <PackageReference Update="coverlet.collector" Version="1.0.1" />
