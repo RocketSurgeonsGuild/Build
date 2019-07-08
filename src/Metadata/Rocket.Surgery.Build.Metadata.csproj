@@ -5,6 +5,7 @@
     <ItemGroup>
         <None Include="build/*.*" Pack="true" PackagePath="build" />
         <None Include="buildMultiTargeting/*.*" Pack="true" PackagePath="buildMultiTargeting" />
+        <InternalsVisibleTo Include="Rocket.Surgery.Build.Information.Tests" />
     </ItemGroup>
     <ItemGroup>
       <Compile Remove="**\*.cs" />
