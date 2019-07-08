@@ -19,7 +19,7 @@ resources:
 
 variables:
   CONFIGURATION: Release
-  VERBOSITY: Verbose
+  VERBOSITY: Normal
   DOTNETVERSION: "2.2.300"
   DOTNET3VERSION: "3.0.100-preview6-012264"
   NUGETVERSION: "5.1.0"

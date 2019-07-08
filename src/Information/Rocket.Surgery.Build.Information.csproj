@@ -2,4 +2,7 @@
     <PropertyGroup>
         <TargetFrameworks>netstandard1.3</TargetFrameworks>
     </PropertyGroup>
+    <ItemGroup>
+        <InternalsVisibleTo Include="Rocket.Surgery.Build.Information.Tests" />
+    </ItemGroup>
 </Project>

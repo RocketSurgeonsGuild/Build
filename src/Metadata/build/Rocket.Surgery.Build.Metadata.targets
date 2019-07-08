@@ -1,4 +1,5 @@
 ﻿<Project>
+  <Import Project="$(MSBuildThisFileDirectory)\GenerateInternalsVisibleTo.targets" />
   <Import Project="$(MSBuildThisFileDirectory)\jetbrains.targets" />
   <Import Project="$(MSBuildThisFileDirectory)\sourcelink.targets" />
   <Import Project="$(MSBuildThisFileDirectory)\gitversion.targets" />
