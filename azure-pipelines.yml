@@ -20,9 +20,6 @@ resources:
 variables:
   CONFIGURATION: Release
   VERBOSITY: Normal
-  DOTNETVERSION: "2.2.300"
-  DOTNET3VERSION: "3.0.100-preview6-012264"
-  NUGETVERSION: "5.1.0"
   COVERAGE: "$(Agent.BuildDirectory)/c"
   ARTIFACTS: $(Build.ArtifactStagingDirectory)
   DOTNET_SKIP_FIRST_TIME_EXPERIENCE: "true"
@@ -33,6 +30,7 @@ jobs:
     parameters:
       Configuration: $(Configuration)
       Verbosity: $(Verbosity)
-      DotNetVersion: $(DotNetVersion)
-      DotNet3Version: $(DotNet3Version)
-      NuGetVersion: $(NuGetVersion)
+      GitHubPackages: true
+      DotNetVersion: "2.2.300"
+      DotNet3Version: "3.0.100-preview6-012264"
+      NuGetVersion: "5.1.0"

@@ -1,0 +1,25 @@
+# create:
+#   include-footer: false
+#   footer-heading:
+#   footer-content:
+#   footer-includes-milestone: false
+#   milestone-replace-text:
+# export:
+#   include-created-date-in-title: false
+#   created-date-string-format:
+#   perform-regex-removal: false
+#   regex-text:
+#   multiline-regex: false
+issue-labels-include:
+  - ":boom: breaking change"
+  - ":rocket: feature"
+  - ":fire: enhancement"
+  - ":blue_book: documentation"
+  - ":beetle: bug"
+  - ":raised_hand: good first issue"
+  - ":raised_hand: help wanted"
+issue-labels-exclude:
+  - ":x: invalid"
+  - ":grey_question: question"
+  - ":lock: wontfix"
+  - ":family: duplicate"
