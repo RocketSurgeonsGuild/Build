@@ -18,19 +18,27 @@ resources:
       endpoint: github
 
 variables:
-  CONFIGURATION: Release
-  VERBOSITY: Normal
-  COVERAGE: "$(Agent.BuildDirectory)/c"
-  ARTIFACTS: $(Build.ArtifactStagingDirectory)
-  DOTNET_SKIP_FIRST_TIME_EXPERIENCE: "true"
-  CodeCovToken: 'b8f8fb39-5edd-4784-824f-02cc2d8261c6'
+  - group: rsg-bot
+  - name: CONFIGURATION
+    value: Release
+  - name: VERBOSITY
+    value: Normal
+  - name: COVERAGE
+    value: "$(Agent.BuildDirectory)/c"
+  - name: ARTIFACTS
+    value: $(Build.ArtifactStagingDirectory)
+  - name: DOTNET_SKIP_FIRST_TIME_EXPERIENCE
+    value: "true"
+  - name: CodeCovToken
+    value: 'b8f8fb39-5edd-4784-824f-02cc2d8261c6'
 
 jobs:
   - template: pipeline/nuke.yml@rsg
     parameters:
       Configuration: $(Configuration)
       Verbosity: $(Verbosity)
-      GitHubPackages: true
+      GitHub: true
+      GitHubPackages: false
       DotNetVersion: "2.2.300"
       DotNet3Version: "3.0.100-preview6-012264"
       NuGetVersion: "5.1.0"
