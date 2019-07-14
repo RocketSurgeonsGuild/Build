@@ -1,11 +1,11 @@
 # create:
 #   include-footer: false
-#   footer-heading:
-#   footer-content:
+#   footer-heading: ''
+#   footer-content: ''
 #   footer-includes-milestone: false
 #   milestone-replace-text:
 # export:
-#   include-created-date-in-title: false
+#   include-created-date-in-title: true
 #   created-date-string-format:
 #   perform-regex-removal: false
 #   regex-text:
