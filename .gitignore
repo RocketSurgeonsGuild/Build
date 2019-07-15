@@ -201,3 +201,4 @@ project.lock.json
 /tools/*.md5sum
 !tools/packages.config
 codealike.json
+test.ps1
