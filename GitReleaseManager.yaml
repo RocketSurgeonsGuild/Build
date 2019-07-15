@@ -11,8 +11,10 @@ issue-labels-include:
   - ":fire: enhancement"
   - ":blue_book: documentation"
   - ":beetle: bug"
+  - ":squirrel: chore"
   - ":raised_hand: good first issue"
   - ":raised_hand: help wanted"
+  - ":sparkles: mysterious"
 issue-labels-exclude:
   - ":x: invalid"
   - ":grey_question: question"
