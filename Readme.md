@@ -8,6 +8,7 @@
 [![github-release-badge]][github-release]
 
 [![azurepipelines-history-badge]][azurepipelines-history]
+[![appveyor-history-badge]][appveyor]
 
 <!-- packages -->
 [![nuget-information-badge]][nuget-information]
@@ -45,8 +46,11 @@
 [azurepipelines]: https://rocketsurgeonsguild.visualstudio.com/Libraries/_build/latest?definitionId=5&branchName=master
 [azurepipelines-badge]: https://img.shields.io/azure-devops/build/RocketSurgeonsGuild/4b78ee30-6b45-4f52-ac5a-bcea4b906cc6/RSG.Build.svg?color=98C6FF&label=azure%20pipelines&logo=azuredevops&logoColor=98C6FF&style=flat "Azure Pipelines"
 
-[azurepipelines-history]: https://rocketsurgeonsguild.visualstudio.com/Libraries/_build/latest?definitionId=5&branchName=master
-[azurepipelines-history-badge]: https://rocketsurgeonsguild.visualstudio.com/Libraries/_build/latest?definitionId=5&branchName=master
+[azurepipelines-history]: https://rocketsurgeonsguild.visualstudio.com/Libraries/_build?definitionId=5&branchName=master
+[azurepipelines-history-badge]: https://buildstats.info/azurepipelines/chart/RocketSurgeonsGuild/Libraries/5?includeBuildsFromPullRequest=false "Azure Pipelines History"
+
+[appveyor-history]: https://ci.appveyor.com/project/RocketSurgeonsGuild/Build/history
+[appveyor-history-badge]: https://buildstats.info/appveyor/chart/RocketSurgeonsGuild/Build?includeBuildsFromPullRequest=false "AppVeyor History"
 
 [appveyor]: https://ci.appveyor.com/project/RocketSurgeonsGuild/Build
 [appveyor-badge]: https://img.shields.io/appveyor/ci/RocketSurgeonsGuild/Build.svg?color=00b3e0&label=appveyor&logo=appveyor&logoColor=00b3e0&style=flat "AppVeyor"
@@ -100,9 +104,19 @@
 [myget-version-pre-metadata-badge]: https://img.shields.io/myget/rocket-surgeons-guild/vpre/Rocket.Surgery.Build.Metadata.svg?color=aaaa00&label=myget:%20Rocket.Surgery.Build.Metadata&logo=nuget&logoColor=aaaa00&style=flat "MyGet: Rocket.Surgery.Build.Metadata"
 <!-- package references -->
 
-<!-- data
-azurepipelines
+<!-- nuke-data
+github:
+  owner: RocketSurgeonsGuild
+  repository: Build
+azurepipelines:
+  account: rocketsurgeonsguild
+  teamproject: Libraries
   builddefinition: 5
-
-
+appveyor:
+  account: RocketSurgeonsGuild
+  build: Build
+myget:
+  account: rocket-surgeons-guild
+codeacy:
+  project: b29e0b29ee834b9ba52c07042aee41cf
 -->
