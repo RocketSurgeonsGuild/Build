@@ -18,7 +18,7 @@ Every good Rocket Surgeon needs a way to know where there code came from.  This 
 5) Adds support for a new `ItemGroup` Item `<InternalsVisibleTo Include="MyAssembly">`
 6) The information package allows for exatracting
 
-# What is our status?
+# Status
 <!-- badges -->
 [![github-release-badge]][github-release]
 [![github-license-badge]][github-license]
