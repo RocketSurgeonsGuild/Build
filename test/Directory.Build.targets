@@ -15,5 +15,6 @@
         <PackageReference Include="xunit.runner.visualstudio" />
         <PackageReference Include="XunitXml.TestLogger" />
     </ItemGroup>
+    <Import Project="..\src\Metadata\build\Rocket.Surgery.Build.Metadata.targets" />
     <Import Project="$([MSBuild]::GetPathOfFileAbove('Directory.Build.targets', '$(MSBuildThisFileDirectory)../'))" />
 </Project>

@@ -210,11 +210,6 @@ namespace Rocket.Surgery.Build.Information
         /// <value>The sha.</value>
         [Prefix("GitVersion_"), UsedImplicitly] public string Sha { get; [UsedImplicitly] private set; }
         /// <summary>
-        /// Gets the short sha.
-        /// </summary>
-        /// <value>The short sha.</value>
-        [Prefix("GitVersion_"), UsedImplicitly] public string ShortSha { get; [UsedImplicitly] private set; }
-        /// <summary>
         /// Gets the nu get version v2.
         /// </summary>
         /// <value>The nu get version v2.</value>

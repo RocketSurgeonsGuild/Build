@@ -1,5 +1,4 @@
 <Project Sdk="Microsoft.NET.Sdk">
-    <Import Project="..\..\src\Metadata\build\Rocket.Surgery.Build.Metadata.props" />
     <PropertyGroup>
         <TargetFrameworks>netcoreapp2.1;netcoreapp3.0</TargetFrameworks>
         <GitVersion_SemVer Condition="'$(GitVersion_SemVer)' == ''">testing1234</GitVersion_SemVer>
@@ -7,5 +6,4 @@
     <ItemGroup>
         <ProjectReference Include="..\..\src\Information\Rocket.Surgery.Build.Information.csproj" />
     </ItemGroup>
-    <Import Project="..\..\src\Metadata\build\Rocket.Surgery.Build.Metadata.targets" />
 </Project>

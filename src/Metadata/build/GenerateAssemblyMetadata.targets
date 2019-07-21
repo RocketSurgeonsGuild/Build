@@ -4,6 +4,7 @@
 <Project>
   <PropertyGroup>
     <CompileDependsOn>GenerateAssemblyMetadataFile;$(CompileDependsOn)</CompileDependsOn>
+    <GeneratedAssemblyMetadata Condition="'$(GeneratedAssemblyMetadata)' == ''">true</GeneratedAssemblyMetadata>
     <GeneratedAssemblyMetadataFile>$(IntermediateOutputPath)$(MSBuildProjectName).AssemblyMetadata$(DefaultLanguageSourceExtension)</GeneratedAssemblyMetadataFile>
   </PropertyGroup>
 
@@ -27,7 +28,7 @@
     Dependency on PrepareForBuild is necessary so that we don't accidentally get ordered before it.
     We rely on PrepareForBuild to create the IntermediateOutputDirectory if it doesn't exist.
   -->
-  <Target Name="GenerateAssemblyMetadataFile" Outputs="$(GeneratedAssemblyMetadataFile)" DependsOnTargets="PrepareGenerateAssemblyMetadataFile;PrepareForBuild" Condition="'@(AssemblyMetadata)' != ''" BeforeTargets="CoreCompile">
+  <Target Name="GenerateAssemblyMetadataFile" Outputs="$(GeneratedAssemblyMetadataFile)" DependsOnTargets="PrepareGenerateAssemblyMetadataFile;PrepareForBuild" Condition="'@(AssemblyMetadata)' != '' and '$(GeneratedAssemblyMetadata)' == 'true'" BeforeTargets="CoreCompile">
     <WriteCodeFragment AssemblyAttributes="@(_AssemblyMetadataAttribute)" Language="$(Language)" OutputFile="$(GeneratedAssemblyMetadataFile)">
       <Output TaskParameter="OutputFile" ItemName="CompileBefore" Condition="'$(Language)' == 'F#'" />
       <Output TaskParameter="OutputFile" ItemName="Compile" Condition="'$(Language)' != 'F#'" />
