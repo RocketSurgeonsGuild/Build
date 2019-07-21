@@ -1,9 +1,10 @@
 ﻿<Project>
-  <Import Project="$(MSBuildThisFileDirectory)\GenerateInternalsVisibleTo.targets" />
   <Import Project="$(MSBuildThisFileDirectory)\jetbrains.targets" />
   <Import Project="$(MSBuildThisFileDirectory)\sourcelink.targets" />
   <Import Project="$(MSBuildThisFileDirectory)\gitversion.targets" />
   <Import Project="$(MSBuildThisFileDirectory)\gitlab.targets" />
   <Import Project="$(MSBuildThisFileDirectory)\appveyor.targets" />
   <Import Project="$(MSBuildThisFileDirectory)\vsts.targets" />
+  <Import Project="$(MSBuildThisFileDirectory)\GenerateAssemblyMetadata.targets" />
+  <Import Project="$(MSBuildThisFileDirectory)\GenerateInternalsVisibleTo.targets" />
 </Project>

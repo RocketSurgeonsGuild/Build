@@ -26,16 +26,8 @@
     Dependency on PrepareForBuild is necessary so that we don't accidentally get ordered before it.
     We rely on PrepareForBuild to create the IntermediateOutputDirectory if it doesn't exist.
   -->
-  <Target Name="GenerateInternalsVisibleToFile"
-          Inputs="$(MSBuildThisFileFullPath);$(MSBuildProjectFile)"
-          Outputs="$(GeneratedInternalsVisibleToFile)"
-          DependsOnTargets="PrepareGenerateInternalsVisibleToFile;PrepareForBuild"
-          Condition="'@(InternalsVisibleTo)' != ''"
-          BeforeTargets="CoreCompile">
-
-    <WriteCodeFragment AssemblyAttributes="@(_InternalsVisibleToAttribute)"
-                       Language="$(Language)"
-                       OutputFile="$(GeneratedInternalsVisibleToFile)">
+  <Target Name="GenerateInternalsVisibleToFile" Outputs="$(GeneratedInternalsVisibleToFile)" DependsOnTargets="PrepareGenerateInternalsVisibleToFile;PrepareForBuild" Condition="'@(InternalsVisibleTo)' != ''" BeforeTargets="CoreCompile">
+    <WriteCodeFragment AssemblyAttributes="@(_InternalsVisibleToAttribute)" Language="$(Language)" OutputFile="$(GeneratedInternalsVisibleToFile)">
       <Output TaskParameter="OutputFile" ItemName="CompileBefore" Condition="'$(Language)' == 'F#'" />
       <Output TaskParameter="OutputFile" ItemName="Compile" Condition="'$(Language)' != 'F#'" />
       <Output TaskParameter="OutputFile" ItemName="FileWrites" />

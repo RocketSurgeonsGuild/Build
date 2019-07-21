@@ -1,74 +1,23 @@
 <Project>
     <Target Name="AddVstsAttributes" BeforeTargets="CoreCompile" Condition="'$(TF_BUILD)'!=''">
         <ItemGroup>
-            <AssemblyAttribute Include="System.Reflection.AssemblyMetadata">
-                <_Parameter1>Vsts_AgentId</_Parameter1>
-                <_Parameter2>$(AGENT_ID)</_Parameter2>
-            </AssemblyAttribute>
-            <AssemblyAttribute Include="System.Reflection.AssemblyMetadata">
-                <_Parameter1>Vsts_AgentName</_Parameter1>
-                <_Parameter2>$(AGENT_NAME)</_Parameter2>
-            </AssemblyAttribute>
-            <AssemblyAttribute Include="System.Reflection.AssemblyMetadata">
-                <_Parameter1>Vsts_BuildId</_Parameter1>
-                <_Parameter2>$(BUILD_BUILDID)</_Parameter2>
-            </AssemblyAttribute>
-            <AssemblyAttribute Include="System.Reflection.AssemblyMetadata">
-                <_Parameter1>Vsts_BuildNumber</_Parameter1>
-                <_Parameter2>$(BUILD_BUILDNUMBER)</_Parameter2>
-            </AssemblyAttribute>
-            <AssemblyAttribute Include="System.Reflection.AssemblyMetadata">
-                <_Parameter1>Vsts_BuildDefinitionName</_Parameter1>
-                <_Parameter2>$(BUILD_DEFINITIONNAME)</_Parameter2>
-            </AssemblyAttribute>
-            <AssemblyAttribute Include="System.Reflection.AssemblyMetadata">
-                <_Parameter1>Vsts_BuildDefinitionVersion</_Parameter1>
-                <_Parameter2>$(BUILD_DEFINITIONVERSION)</_Parameter2>
-            </AssemblyAttribute>
-            <AssemblyAttribute Include="System.Reflection.AssemblyMetadata">
-                <_Parameter1>Vsts_RepositoryName</_Parameter1>
-                <_Parameter2>$(BUILD_REPOSITORY_NAME)</_Parameter2>
-            </AssemblyAttribute>
-            <AssemblyAttribute Include="System.Reflection.AssemblyMetadata">
-                <_Parameter1>Vsts_RepositoryProvider</_Parameter1>
-                <_Parameter2>$(BUILD_REPOSITORY_PROVIDER)</_Parameter2>
-            </AssemblyAttribute>
-            <AssemblyAttribute Include="System.Reflection.AssemblyMetadata">
-                <_Parameter1>Vsts_RepositoryUri</_Parameter1>
-                <_Parameter2>$(BUILD_REPOSITORY_URI)</_Parameter2>
-            </AssemblyAttribute>
-            <AssemblyAttribute Include="System.Reflection.AssemblyMetadata">
-                <_Parameter1>Vsts_SourceBranch</_Parameter1>
-                <_Parameter2>$(BUILD_SOURCEBRANCH)</_Parameter2>
-            </AssemblyAttribute>
-            <AssemblyAttribute Include="System.Reflection.AssemblyMetadata">
-                <_Parameter1>Vsts_SourceBranchName</_Parameter1>
-                <_Parameter2>$(BUILD_SOURCEBRANCHNAME)</_Parameter2>
-            </AssemblyAttribute>
-            <AssemblyAttribute Include="System.Reflection.AssemblyMetadata">
-                <_Parameter1>Vsts_SourceVersion</_Parameter1>
-                <_Parameter2>$(BUILD_SOURCEVERSION)</_Parameter2>
-            </AssemblyAttribute>
-            <AssemblyAttribute Include="System.Reflection.AssemblyMetadata">
-                <_Parameter1>Vsts_CollectionId</_Parameter1>
-                <_Parameter2>$(SYSTEM_COLLECTIONID)</_Parameter2>
-            </AssemblyAttribute>
-            <AssemblyAttribute Include="System.Reflection.AssemblyMetadata">
-                <_Parameter1>Vsts_DefinitionId</_Parameter1>
-                <_Parameter2>$(SYSTEM_DEFINITIONID)</_Parameter2>
-            </AssemblyAttribute>
-            <AssemblyAttribute Include="System.Reflection.AssemblyMetadata">
-                <_Parameter1>Vsts_CollectionUri</_Parameter1>
-                <_Parameter2>$(SYSTEM_TEAMFOUNDATIONCOLLECTIONURI)</_Parameter2>
-            </AssemblyAttribute>
-            <AssemblyAttribute Include="System.Reflection.AssemblyMetadata">
-                <_Parameter1>Vsts_TeamProject</_Parameter1>
-                <_Parameter2>$(SYSTEM_TEAMPROJECT)</_Parameter2>
-            </AssemblyAttribute>
-            <AssemblyAttribute Include="System.Reflection.AssemblyMetadata">
-                <_Parameter1>Vsts_TeamProjectId</_Parameter1>
-                <_Parameter2>$(SYSTEM_TEAMPROJECTID)</_Parameter2>
-            </AssemblyAttribute>
+            <AssemblyMetadata Include="Vsts_AgentId" Value="$(AGENT_ID)" />
+            <AssemblyMetadata Include="Vsts_AgentName" Value="$(AGENT_NAME)" />
+            <AssemblyMetadata Include="Vsts_BuildId" Value="$(BUILD_BUILDID)" />
+            <AssemblyMetadata Include="Vsts_BuildNumber" Value="$(BUILD_BUILDNUMBER)" />
+            <AssemblyMetadata Include="Vsts_BuildDefinitionName" Value="$(BUILD_DEFINITIONNAME)" />
+            <AssemblyMetadata Include="Vsts_BuildDefinitionVersion" Value="$(BUILD_DEFINITIONVERSION)" />
+            <AssemblyMetadata Include="Vsts_RepositoryName" Value="$(BUILD_REPOSITORY_NAME)" />
+            <AssemblyMetadata Include="Vsts_RepositoryProvider" Value="$(BUILD_REPOSITORY_PROVIDER)" />
+            <AssemblyMetadata Include="Vsts_RepositoryUri" Value="$(BUILD_REPOSITORY_URI)" />
+            <AssemblyMetadata Include="Vsts_SourceBranch" Value="$(BUILD_SOURCEBRANCH)" />
+            <AssemblyMetadata Include="Vsts_SourceBranchName" Value="$(BUILD_SOURCEBRANCHNAME)" />
+            <AssemblyMetadata Include="Vsts_SourceVersion" Value="$(BUILD_SOURCEVERSION)" />
+            <AssemblyMetadata Include="Vsts_CollectionId" Value="$(SYSTEM_COLLECTIONID)" />
+            <AssemblyMetadata Include="Vsts_DefinitionId" Value="$(SYSTEM_DEFINITIONID)" />
+            <AssemblyMetadata Include="Vsts_CollectionUri" Value="$(SYSTEM_TEAMFOUNDATIONCOLLECTIONURI)" />
+            <AssemblyMetadata Include="Vsts_TeamProject" Value="$(SYSTEM_TEAMPROJECT)" />
+            <AssemblyMetadata Include="Vsts_TeamProjectId" Value="$(SYSTEM_TEAMPROJECTID)" />
         </ItemGroup>
     </Target>
 </Project>
