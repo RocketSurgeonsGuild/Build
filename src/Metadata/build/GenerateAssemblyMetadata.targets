@@ -3,6 +3,7 @@
 <!-- https://github.com/dotnet/arcade/blob/671bfe2954fe2e0fc2052cb0ee59cbfe9e5e8801/src/Microsoft.DotNet.Arcade.Sdk/tools/GenerateAssemblyMetadata.targets -->
 <Project>
   <PropertyGroup>
+    <CompileDependsOn>GenerateAssemblyMetadataFile;$(CompileDependsOn)</CompileDependsOn>
     <GeneratedAssemblyMetadataFile>$(IntermediateOutputPath)$(MSBuildProjectName).AssemblyMetadata$(DefaultLanguageSourceExtension)</GeneratedAssemblyMetadataFile>
   </PropertyGroup>
 

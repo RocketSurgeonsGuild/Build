@@ -3,6 +3,7 @@
 <!-- https://github.com/dotnet/arcade/blob/671bfe2954fe2e0fc2052cb0ee59cbfe9e5e8801/src/Microsoft.DotNet.Arcade.Sdk/tools/GenerateInternalsVisibleTo.targets -->
 <Project>
   <PropertyGroup>
+    <CompileDependsOn>GenerateInternalsVisibleToFile;$(CompileDependsOn)</CompileDependsOn>
     <GeneratedInternalsVisibleToFile>$(IntermediateOutputPath)$(MSBuildProjectName).InternalsVisibleTo$(DefaultLanguageSourceExtension)</GeneratedInternalsVisibleToFile>
   </PropertyGroup>
 

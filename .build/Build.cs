@@ -10,7 +10,7 @@ using Newtonsoft.Json;
 using Nuke.Common;
 using Nuke.Common.Execution;
 using Nuke.Common.ProjectModel;
-using Rocket.Surgery.Nuke;
+using Rocket.Surgery.Nuke.DotNetCore;
 using YamlDotNet.Core;
 using YamlDotNet.Serialization;
 using YamlDotNet.Serialization.NamingConventions;
@@ -29,5 +29,5 @@ class Program : DotNetCoreBuild
 
     public static int Main() => Execute<Program>(x => x.Default);
 
-    public Target Default => _ => _.DependsOn(Core);
+    public Target Default => _ => _.DependsOn(DotNetCore);
 }
