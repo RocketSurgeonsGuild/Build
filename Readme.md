@@ -15,7 +15,8 @@ Every good Rocket Surgeon needs a way to know where there code came from.  This 
   * Enables some sane defaults for SourceLink packages
 4) JetBrains.Annotations
   * Brings in `JetBrains.Annotations` automagically as a source file.
-5) Adds support for a new `ItemGroup` Item `<InternalsVisibleTo Include="MyAssembly">`
+5) Adds support for a new `ItemGroup` Item `<InternalsVisibleTo Include="MyAssembly" />`
+5) Adds support for a new `ItemGroup` Item `<AssemblyMetadata Include="Key" Value="Value" />`
 6) The information package allows for exatracting
 
 # Status
