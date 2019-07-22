@@ -24,7 +24,6 @@ Every good Rocket Surgeon needs a way to know where there code came from.  This 
 [![github-release-badge]][github-release]
 [![github-license-badge]][github-license]
 [![codecov-badge]][codecov]
-[![codacy-badge]][codacy]
 <!-- badges -->
 
 <!-- history badges -->
@@ -51,8 +50,6 @@ TBD
 [github-license-badge]: https://img.shields.io/github/license/RocketSurgeonsGuild/Build.svg?style=flat "License"
 [codecov]: https://codecov.io/gh/RocketSurgeonsGuild/Build
 [codecov-badge]: https://img.shields.io/codecov/c/github/RocketSurgeonsGuild/Build.svg?color=E03997&label=codecov&logo=codecov&logoColor=E03997&style=flat "Code Coverage"
-[codacy]: https://www.codacy.com/app/RocketSurgeonsGuild/Build
-[codacy-badge]: https://api.codacy.com/project/badge/Grade/b29e0b29ee834b9ba52c07042aee41cf "Codacy"
 [azurepipelines]: https://rocketsurgeonsguild.visualstudio.com/Libraries/_build/latest?definitionId=5&branchName=master
 [azurepipelines-badge]: https://img.shields.io/azure-devops/build/rocketsurgeonsguild/Libraries/5.svg?color=98C6FF&label=azure%20pipelines&logo=azuredevops&logoColor=98C6FF&style=flat "Azure Pipelines Status"
 [azurepipelines-history]: https://rocketsurgeonsguild.visualstudio.com/Libraries/_build?definitionId=5&branchName=master
@@ -88,6 +85,4 @@ appveyor:
   build: Build
 myget:
   account: rocket-surgeons-guild
-codacy:
-  project: b29e0b29ee834b9ba52c07042aee41cf
 -->
