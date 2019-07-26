@@ -39,6 +39,6 @@ jobs:
       Verbosity: $(Verbosity)
       GitHub: true
       GitHubPackages: false
-      DotNetVersion: "2.2.401"
+      DotNetVersion: "2.2.301"
       DotNet3Version: "3.0.100-preview7-012821"
       NuGetVersion: "5.2.0"
