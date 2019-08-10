@@ -6,10 +6,10 @@
     <GlobalPackageReference Include="Roslynator.Analyzers" Version="2.1.0" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Update="Nuke.Common" Version="0.21.1" />
-    <PackageReference Update="Rocket.Surgery.Nuke.DotNetCore" Version="0.2.8" />
-    <PackageReference Update="GitVersion.CommandLine.DotNetCore" Version="5.0.0-beta5.51" />
-    <PackageReference Update="ReportGenerator" Version="4.2.11" />
+    <PackageReference Update="Nuke.Common" Version="0.21.2" />
+    <PackageReference Update="Rocket.Surgery.Nuke.DotNetCore" Version="0.3.2" />
+    <PackageReference Update="GitVersion.CommandLine.DotNetCore" Version="5.0.1-beta1.14" />
+    <PackageReference Update="ReportGenerator" Version="4.2.12" />
     <PackageReference Update="YamlDotNet" Version="6.1.2" />
     <PackageReference Update="Buildalyzer" Version="2.3.0" />
   </ItemGroup>
