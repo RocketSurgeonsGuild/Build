@@ -7,7 +7,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Update="Nuke.Common" Version="0.21.2" />
-    <PackageReference Update="Rocket.Surgery.Nuke.DotNetCore" Version="0.3.2" />
+    <PackageReference Update="Rocket.Surgery.Nuke.DotNetCore" Version="0.3.5" />
     <PackageReference Update="GitVersion.CommandLine.DotNetCore" Version="5.0.1-beta1.14" />
     <PackageReference Update="ReportGenerator" Version="4.2.12" />
     <PackageReference Update="YamlDotNet" Version="6.1.2" />
@@ -21,7 +21,7 @@
     <PackageReference Update="coverlet.msbuild" Version="2.6.3" />
     <PackageReference Update="FakeItEasy" Version="5.1.1" />
     <PackageReference Update="FakeItEasy.Analyzer.CSharp" Version="5.1.1" />
-    <PackageReference Update="FluentAssertions" Version="5.7.0" />
+    <PackageReference Update="FluentAssertions" Version="5.8.0" />
     <PackageReference Update="FluentAssertions.Analyzers" Version="0.11.4" />
     <PackageReference Update="Microsoft.NET.Test.Sdk" Version="16.2.0" />
     <PackageReference Update="xunit" Version="2.4.1" />
