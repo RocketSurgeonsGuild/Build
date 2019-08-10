@@ -6,5 +6,6 @@
         </CoreCompileDependsOn>
 
         <PackageProjectUrl Condition="'$(BUILD_REPOSITORY_PROVIDER)' == 'GitHub'">$(BUILD_REPOSITORY_URI)</PackageProjectUrl>
+        <ContinuousIntegrationBuild Condition="'$(ContinuousIntegrationBuild)' == ''">true</ContinuousIntegrationBuild>
     </PropertyGroup>
 </Project>
