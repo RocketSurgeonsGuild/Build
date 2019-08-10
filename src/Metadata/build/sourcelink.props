@@ -4,6 +4,5 @@
         <IncludeSymbols>true</IncludeSymbols>
         <SymbolPackageFormat>snupkg</SymbolPackageFormat>
         <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
-        <AllowedReferenceRelatedFileExtensions>$(AllowedReferenceRelatedFileExtensions);.pdb</AllowedReferenceRelatedFileExtensions>
     </PropertyGroup>
 </Project>

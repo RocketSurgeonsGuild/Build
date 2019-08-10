@@ -1,4 +1,7 @@
 ﻿<Project>
+  <PropertyGroup>
+    <IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
+  </PropertyGroup>
   <Import Project="$(MSBuildThisFileDirectory)\jetbrains.props" />
   <Import Project="$(MSBuildThisFileDirectory)\sourcelink.props" />
   <Import Project="$(MSBuildThisFileDirectory)\gitversion.props" />
