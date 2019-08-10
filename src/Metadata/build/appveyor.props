@@ -4,7 +4,5 @@
             $(CoreCompileDependsOn);
             AddAppVeyorAttributes;
         </CoreCompileDependsOn>
-
-        <ContinuousIntegrationBuild Condition="'$(ContinuousIntegrationBuild)' == '' and '$(DesignTimeBuild)' != 'true'">true</ContinuousIntegrationBuild>
     </PropertyGroup>
 </Project>
