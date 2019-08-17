@@ -1,11 +1,13 @@
 ﻿<Project>
-  <PropertyGroup>
-    <IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
-  </PropertyGroup>
   <Import Project="$(MSBuildThisFileDirectory)\jetbrains.props" />
   <Import Project="$(MSBuildThisFileDirectory)\sourcelink.props" />
   <Import Project="$(MSBuildThisFileDirectory)\gitversion.props" />
   <Import Project="$(MSBuildThisFileDirectory)\gitlab.props" />
   <Import Project="$(MSBuildThisFileDirectory)\appveyor.props" />
   <Import Project="$(MSBuildThisFileDirectory)\vsts.props" />
+  <PropertyGroup>
+    <IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
+    <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
+    <RestoreLockedMode Condition="'$(ContinuousIntegrationBuild)' == 'true'">true</RestoreLockedMode>
+  </PropertyGroup>
 </Project>
