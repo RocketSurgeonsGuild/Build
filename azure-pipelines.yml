@@ -31,10 +31,6 @@ variables:
     value: "true"
   - name: CodeCovToken
     value: 'b8f8fb39-5edd-4784-824f-02cc2d8261c6'
-  - name: NUGET_PACKAGES
-    value: $(Pipeline.Workspace)/.nuget/packages
-  - name: NUGET_FALLBACK_PACKAGES
-    value: %userprofile%\.nuget\packages;~/.nuget/packages
 
 jobs:
   - template: pipeline/nuke.yml@rsg
