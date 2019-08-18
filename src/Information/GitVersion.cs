@@ -14,7 +14,7 @@ namespace Rocket.Surgery.Build.Information
     /// Implements the <see cref="IEquatable{GitVersion}" />
     /// </summary>
     /// <seealso cref="IEquatable{GitVersion}" />
-    public class GitVersion : IEquatable<GitVersion>
+    public sealed class GitVersion : IEquatable<GitVersion?>
     {
         private readonly InformationProvider _information;
 
@@ -129,124 +129,145 @@ namespace Rocket.Surgery.Build.Information
         /// </summary>
         /// <value>The major.</value>
         [Prefix("GitVersion_"), UsedImplicitly] public int Major { get; [UsedImplicitly] private set; }
+
         /// <summary>
         /// Gets the minor.
         /// </summary>
         /// <value>The minor.</value>
         [Prefix("GitVersion_"), UsedImplicitly] public int Minor { get; [UsedImplicitly] private set; }
+
         /// <summary>
         /// Gets the patch.
         /// </summary>
         /// <value>The patch.</value>
         [Prefix("GitVersion_"), UsedImplicitly] public int Patch { get; [UsedImplicitly] private set; }
+
         /// <summary>
         /// Gets the pre release tag.
         /// </summary>
         /// <value>The pre release tag.</value>
-        [Prefix("GitVersion_"), UsedImplicitly] public string PreReleaseTag { get; [UsedImplicitly] private set; }
+        [Prefix("GitVersion_"), UsedImplicitly] public string? PreReleaseTag { get; [UsedImplicitly] private set; }
+
         /// <summary>
         /// Gets the pre release tag with dash.
         /// </summary>
         /// <value>The pre release tag with dash.</value>
-        [Prefix("GitVersion_"), UsedImplicitly] public string PreReleaseTagWithDash { get; [UsedImplicitly] private set; }
+        [Prefix("GitVersion_"), UsedImplicitly] public string? PreReleaseTagWithDash { get; [UsedImplicitly] private set; }
+
         /// <summary>
         /// Gets the build meta data.
         /// </summary>
         /// <value>The build meta data.</value>
-        [Prefix("GitVersion_"), UsedImplicitly] public string BuildMetaData { get; [UsedImplicitly] private set; }
+        [Prefix("GitVersion_"), UsedImplicitly] public string? BuildMetaData { get; [UsedImplicitly] private set; }
+
         /// <summary>
         /// Gets the build meta data padded.
         /// </summary>
         /// <value>The build meta data padded.</value>
-        [Prefix("GitVersion_"), UsedImplicitly] public string BuildMetaDataPadded { get; [UsedImplicitly] private set; }
+        [Prefix("GitVersion_"), UsedImplicitly] public string? BuildMetaDataPadded { get; [UsedImplicitly] private set; }
+
         /// <summary>
         /// Gets the full build meta data.
         /// </summary>
         /// <value>The full build meta data.</value>
-        [Prefix("GitVersion_"), UsedImplicitly] public string FullBuildMetaData { get; [UsedImplicitly] private set; }
+        [Prefix("GitVersion_"), UsedImplicitly] public string? FullBuildMetaData { get; [UsedImplicitly] private set; }
+
         /// <summary>
         /// Gets the major minor patch.
         /// </summary>
         /// <value>The major minor patch.</value>
-        [Prefix("GitVersion_"), UsedImplicitly] public string MajorMinorPatch { get; [UsedImplicitly] private set; }
+        [Prefix("GitVersion_"), UsedImplicitly] public string? MajorMinorPatch { get; [UsedImplicitly] private set; }
+
         /// <summary>
         /// Gets the sem ver.
         /// </summary>
         /// <value>The sem ver.</value>
-        [Prefix("GitVersion_"), UsedImplicitly] public string SemVer { get; [UsedImplicitly] private set; }
+        [Prefix("GitVersion_"), UsedImplicitly] public string? SemVer { get; [UsedImplicitly] private set; }
+
         /// <summary>
         /// Gets the legacy sem ver.
         /// </summary>
         /// <value>The legacy sem ver.</value>
-        [Prefix("GitVersion_"), UsedImplicitly] public string LegacySemVer { get; [UsedImplicitly] private set; }
+        [Prefix("GitVersion_"), UsedImplicitly] public string? LegacySemVer { get; [UsedImplicitly] private set; }
+
         /// <summary>
         /// Gets the legacy sem ver padded.
         /// </summary>
         /// <value>The legacy sem ver padded.</value>
-        [Prefix("GitVersion_"), UsedImplicitly] public string LegacySemVerPadded { get; [UsedImplicitly] private set; }
+        [Prefix("GitVersion_"), UsedImplicitly] public string? LegacySemVerPadded { get; [UsedImplicitly] private set; }
+
         /// <summary>
         /// Gets the assembly sem ver.
         /// </summary>
         /// <value>The assembly sem ver.</value>
-        [Prefix("GitVersion_"), UsedImplicitly] public string AssemblySemVer { get; [UsedImplicitly] private set; }
+        [Prefix("GitVersion_"), UsedImplicitly] public string? AssemblySemVer { get; [UsedImplicitly] private set; }
+
         /// <summary>
         /// Gets the full sem ver.
         /// </summary>
         /// <value>The full sem ver.</value>
-        [Prefix("GitVersion_"), UsedImplicitly] public string FullSemVer { get; [UsedImplicitly] private set; }
+        [Prefix("GitVersion_"), UsedImplicitly] public string? FullSemVer { get; [UsedImplicitly] private set; }
+
         /// <summary>
         /// Gets the informational version.
         /// </summary>
         /// <value>The informational version.</value>
-        [Prefix("GitVersion_"), UsedImplicitly] public string InformationalVersion { get; [UsedImplicitly] private set; }
+        [Prefix("GitVersion_"), UsedImplicitly] public string? InformationalVersion { get; [UsedImplicitly] private set; }
+
         /// <summary>
         /// Gets the name of the branch.
         /// </summary>
         /// <value>The name of the branch.</value>
-        [Prefix("GitVersion_"), UsedImplicitly] public string BranchName { get; [UsedImplicitly] private set; }
+        [Prefix("GitVersion_"), UsedImplicitly] public string? BranchName { get; [UsedImplicitly] private set; }
+
         /// <summary>
         /// Gets the sha.
         /// </summary>
         /// <value>The sha.</value>
-        [Prefix("GitVersion_"), UsedImplicitly] public string Sha { get; [UsedImplicitly] private set; }
+        [Prefix("GitVersion_"), UsedImplicitly] public string? Sha { get; [UsedImplicitly] private set; }
+
         /// <summary>
         /// Gets the nu get version v2.
         /// </summary>
         /// <value>The nu get version v2.</value>
-        [Prefix("GitVersion_"), UsedImplicitly] public string NuGetVersionV2 { get; [UsedImplicitly] private set; }
+        [Prefix("GitVersion_"), UsedImplicitly] public string? NuGetVersionV2 { get; [UsedImplicitly] private set; }
+
         /// <summary>
         /// Gets the nu get version.
         /// </summary>
         /// <value>The nu get version.</value>
-        [Prefix("GitVersion_"), UsedImplicitly] public string NuGetVersion { get; [UsedImplicitly] private set; }
+        [Prefix("GitVersion_"), UsedImplicitly] public string? NuGetVersion { get; [UsedImplicitly] private set; }
+
         /// <summary>
         /// Gets the commits since version source.
         /// </summary>
         /// <value>The commits since version source.</value>
         [Prefix("GitVersion_"), UsedImplicitly] public int CommitsSinceVersionSource { get; [UsedImplicitly] private set; }
+
         /// <summary>
         /// Gets the commits since version source padded.
         /// </summary>
         /// <value>The commits since version source padded.</value>
-        [Prefix("GitVersion_"), UsedImplicitly] public string CommitsSinceVersionSourcePadded { get; [UsedImplicitly] private set; }
+        [Prefix("GitVersion_"), UsedImplicitly] public string? CommitsSinceVersionSourcePadded { get; [UsedImplicitly] private set; }
+
         /// <summary>
         /// Gets the commit date.
         /// </summary>
         /// <value>The commit date.</value>
-        [Prefix("GitVersion_"), UsedImplicitly] public string CommitDate { get; [UsedImplicitly] private set; }
+        [Prefix("GitVersion_"), UsedImplicitly] public string? CommitDate { get; [UsedImplicitly] private set; }
 
         /// <summary>
         /// Gets the repository url.
         /// </summary>
         /// <value>The repository URL.</value>
-        [UsedImplicitly] public string RepositoryUrl { get; [UsedImplicitly] private set; }
+        [UsedImplicitly] public string? RepositoryUrl { get; [UsedImplicitly] private set; }
 
         /// <summary>
         /// Determines whether the specified <see cref="System.Object" /> is equal to this instance.
         /// </summary>
         /// <param name="obj">The object to compare with the current object.</param>
         /// <returns><c>true</c> if the specified <see cref="System.Object" /> is equal to this instance; otherwise, <c>false</c>.</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
             return Equals(obj as GitVersion);
         }
@@ -256,18 +277,18 @@ namespace Rocket.Surgery.Build.Information
         /// </summary>
         /// <param name="other">An object to compare with this object.</param>
         /// <returns>true if the current object is equal to the <paramref name="other" /> parameter; otherwise, false.</returns>
-        public bool Equals(GitVersion other)
+        public bool Equals(GitVersion? other)
         {
-            return other != null &&
-                   Major == other.Major &&
-                   Minor == other.Minor &&
-                   Patch == other.Patch &&
-                   PreReleaseTag == other.PreReleaseTag &&
-                   PreReleaseTagWithDash == other.PreReleaseTagWithDash &&
-                   InformationalVersion == other.InformationalVersion &&
-                   BranchName == other.BranchName &&
-                   Sha == other.Sha &&
-                   CommitDate == other.CommitDate;
+            return other! != null!
+                   && Major == other.Major
+                   && Minor == other.Minor
+                   && Patch == other.Patch
+                   && PreReleaseTag == other.PreReleaseTag
+                   && PreReleaseTagWithDash == other.PreReleaseTagWithDash
+                   && InformationalVersion == other.InformationalVersion
+                   && BranchName == other.BranchName
+                   && Sha == other.Sha
+                   && CommitDate == other.CommitDate;
         }
 
         /// <summary>
@@ -277,15 +298,15 @@ namespace Rocket.Surgery.Build.Information
         public override int GetHashCode()
         {
             var hashCode = -1073977946;
-            hashCode = hashCode * -1521134295 + Major.GetHashCode();
-            hashCode = hashCode * -1521134295 + Minor.GetHashCode();
-            hashCode = hashCode * -1521134295 + Patch.GetHashCode();
-            hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(PreReleaseTag);
-            hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(PreReleaseTagWithDash);
-            hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(InformationalVersion);
-            hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(BranchName);
-            hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(Sha);
-            hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(CommitDate);
+            hashCode = (hashCode * -1521134295) + Major.GetHashCode();
+            hashCode = (hashCode * -1521134295) + Minor.GetHashCode();
+            hashCode = (hashCode * -1521134295) + Patch.GetHashCode();
+            hashCode = (hashCode * -1521134295) + EqualityComparer<string>.Default.GetHashCode(PreReleaseTag!);
+            hashCode = (hashCode * -1521134295) + EqualityComparer<string>.Default.GetHashCode(PreReleaseTagWithDash!);
+            hashCode = (hashCode * -1521134295) + EqualityComparer<string>.Default.GetHashCode(InformationalVersion!);
+            hashCode = (hashCode * -1521134295) + EqualityComparer<string>.Default.GetHashCode(BranchName!);
+            hashCode = (hashCode * -1521134295) + EqualityComparer<string>.Default.GetHashCode(Sha!);
+            hashCode = (hashCode * -1521134295) + EqualityComparer<string>.Default.GetHashCode(CommitDate!);
             return hashCode;
         }
 
