@@ -17,13 +17,13 @@ namespace Rocket.Surgery.Build.Information
         /// <param name="instance">The instance.</param>
         internal static void Infer<T>(this InformationProvider provider, T instance)
         {
-            foreach (var property in instance.GetType().GetTypeInfo().DeclaredProperties)
+            foreach (var property in instance!.GetType().GetTypeInfo().DeclaredProperties)
             {
                 // simple props only
                 if (
-                    property.PropertyType.GetTypeInfo().IsPrimitive ||
-                    property.PropertyType.GetTypeInfo().IsEnum ||
-                    property.PropertyType == typeof(string))
+                    property.PropertyType.GetTypeInfo().IsPrimitive
+                    || property.PropertyType.GetTypeInfo().IsEnum
+                    || property.PropertyType == typeof(string))
                 {
                     var prefix = property.GetCustomAttribute<PrefixAttribute>()?.Key ?? string.Empty;
                     var value = provider.GetValue(prefix + property.Name).FirstOrDefault();
