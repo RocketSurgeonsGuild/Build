@@ -8,7 +8,7 @@ using Xunit.Abstractions;
 
 namespace Rocket.Surgery.Build.Information.Tests
 {
-    public class GitVersionTests : AutoTestBase
+    public class GitVersionTests : AutoFakeTest
     {
         public GitVersionTests(ITestOutputHelper outputHelper) : base(outputHelper) { }
 
