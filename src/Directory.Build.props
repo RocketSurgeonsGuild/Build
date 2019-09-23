@@ -4,6 +4,5 @@
     <PropertyGroup>
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
         <IsPackable>true</IsPackable>
-        <PublishRepositoryUrl>true</PublishRepositoryUrl>
     </PropertyGroup>
 </Project>
