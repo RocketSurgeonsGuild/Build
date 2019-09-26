@@ -4,5 +4,6 @@
     <PropertyGroup>
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
         <IsPackable>true</IsPackable>
+        <NoWarn>NU5105;$(NoWarn)</NoWarn>
     </PropertyGroup>
 </Project>
