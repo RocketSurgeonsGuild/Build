@@ -23,68 +23,55 @@ namespace Rocket.Surgery.Build.Information
         /// </summary>
         /// <param name="assembly">The assembly.</param>
         /// <returns>GitVersion.</returns>
-        public static GitVersion For(Assembly assembly)
-        {
-            return new GitVersion(assembly);
-        }
+        public static GitVersion For(Assembly assembly) => new GitVersion(assembly);
 
         /// <summary>
         /// Fors the specified assemblies.
         /// </summary>
         /// <param name="assemblies">The assemblies.</param>
         /// <returns>IDictionary{Assembly, GitVersion}.</returns>
-        public static IDictionary<Assembly, GitVersion> For(IEnumerable<Assembly> assemblies)
-        {
-            return assemblies.Distinct().ToDictionary(x => x, For);
-        }
+        public static IDictionary<Assembly, GitVersion> For(IEnumerable<Assembly> assemblies) => assemblies.Distinct().ToDictionary(x => x, For);
 
         /// <summary>
         /// Fors the specified assemblies.
         /// </summary>
         /// <param name="assemblies">The assemblies.</param>
         /// <returns>IDictionary{Assembly, GitVersion}.</returns>
-        public static IDictionary<Assembly, GitVersion> For(params Assembly[] assemblies)
-        {
-            return assemblies.Distinct().ToDictionary(x => x, For);
-        }
+        public static IDictionary<Assembly, GitVersion> For(params Assembly[] assemblies) => assemblies.Distinct().ToDictionary(x => x, For);
 
         /// <summary>
         /// Fors the specified type.
         /// </summary>
         /// <param name="type">The type.</param>
         /// <returns>GitVersion.</returns>
-        public static GitVersion For(Type type)
-        {
-            return new GitVersion(type.GetTypeInfo().Assembly);
-        }
+        public static GitVersion For(Type type) => new GitVersion(type.GetTypeInfo().Assembly);
 
         /// <summary>
         /// Fors the specified types.
         /// </summary>
         /// <param name="types">The types.</param>
         /// <returns>IDictionary{Assembly, GitVersion}.</returns>
-        public static IDictionary<Assembly, GitVersion> For(IEnumerable<Type> types)
-        {
-            return For(types.Select(x => x.GetTypeInfo().Assembly).Distinct());
-        }
+        public static IDictionary<Assembly, GitVersion> For(IEnumerable<Type> types) => For(types.Select(x => x.GetTypeInfo().Assembly).Distinct());
 
         /// <summary>
         /// Fors the specified types.
         /// </summary>
         /// <param name="types">The types.</param>
         /// <returns>IDictionary{Assembly, GitVersion}.</returns>
-        public static IDictionary<Assembly, GitVersion> For(params Type[] types)
-        {
-            return For(types.Select(x => x.GetTypeInfo().Assembly).Distinct());
-        }
+        public static IDictionary<Assembly, GitVersion> For(params Type[] types) => For(types.Select(x => x.GetTypeInfo().Assembly).Distinct());
 
         /// <summary>
         /// Fors the specified type information.
         /// </summary>
         /// <param name="typeInfo">The type information.</param>
         /// <returns>GitVersion.</returns>
-        public static GitVersion For(TypeInfo typeInfo)
+        public static GitVersion For([NotNull] TypeInfo typeInfo)
         {
+            if (typeInfo == null)
+            {
+                throw new ArgumentNullException(nameof(typeInfo));
+            }
+
             return new GitVersion(typeInfo.Assembly);
         }
 
@@ -93,20 +80,14 @@ namespace Rocket.Surgery.Build.Information
         /// </summary>
         /// <param name="typeInfos">The type infos.</param>
         /// <returns>IDictionary{Assembly, GitVersion}.</returns>
-        public static IDictionary<Assembly, GitVersion> For(IEnumerable<TypeInfo> typeInfos)
-        {
-            return For(typeInfos.Select(x => x.Assembly).Distinct());
-        }
+        public static IDictionary<Assembly, GitVersion> For(IEnumerable<TypeInfo> typeInfos) => For(typeInfos.Select(x => x.Assembly).Distinct());
 
         /// <summary>
         /// Fors the specified type infos.
         /// </summary>
         /// <param name="typeInfos">The type infos.</param>
         /// <returns>IDictionary{Assembly, GitVersion}.</returns>
-        public static IDictionary<Assembly, GitVersion> For(params TypeInfo[] typeInfos)
-        {
-            return For(typeInfos.Select(x => x.Assembly).Distinct());
-        }
+        public static IDictionary<Assembly, GitVersion> For(params TypeInfo[] typeInfos) => For(typeInfos.Select(x => x.Assembly).Distinct());
 
         /// <summary>
         /// Initializes a new instance of the <see cref="GitVersion" /> class.
@@ -256,40 +237,36 @@ namespace Rocket.Surgery.Build.Information
         /// <value>The commit date.</value>
         [Prefix("GitVersion_"), UsedImplicitly] public string? CommitDate { get; [UsedImplicitly] private set; }
 
+#pragma warning disable CA1056 // Uri properties should not be strings
         /// <summary>
         /// Gets the repository url.
         /// </summary>
         /// <value>The repository URL.</value>
         [UsedImplicitly] public string? RepositoryUrl { get; [UsedImplicitly] private set; }
+#pragma warning restore CA1056 // Uri properties should not be strings
 
         /// <summary>
         /// Determines whether the specified <see cref="System.Object" /> is equal to this instance.
         /// </summary>
         /// <param name="obj">The object to compare with the current object.</param>
         /// <returns><c>true</c> if the specified <see cref="System.Object" /> is equal to this instance; otherwise, <c>false</c>.</returns>
-        public override bool Equals(object? obj)
-        {
-            return Equals(obj as GitVersion);
-        }
+        public override bool Equals(object? obj) => Equals(obj as GitVersion);
 
         /// <summary>
         /// Indicates whether the current object is equal to another object of the same type.
         /// </summary>
         /// <param name="other">An object to compare with this object.</param>
         /// <returns>true if the current object is equal to the <paramref name="other" /> parameter; otherwise, false.</returns>
-        public bool Equals(GitVersion? other)
-        {
-            return other! != null!
-                   && Major == other.Major
-                   && Minor == other.Minor
-                   && Patch == other.Patch
-                   && PreReleaseTag == other.PreReleaseTag
-                   && PreReleaseTagWithDash == other.PreReleaseTagWithDash
-                   && InformationalVersion == other.InformationalVersion
-                   && BranchName == other.BranchName
-                   && Sha == other.Sha
-                   && CommitDate == other.CommitDate;
-        }
+        public bool Equals(GitVersion? other) => other! != null!
+         && Major == other.Major
+         && Minor == other.Minor
+         && Patch == other.Patch
+         && PreReleaseTag == other.PreReleaseTag
+         && PreReleaseTagWithDash == other.PreReleaseTagWithDash
+         && InformationalVersion == other.InformationalVersion
+         && BranchName == other.BranchName
+         && Sha == other.Sha
+         && CommitDate == other.CommitDate;
 
         /// <summary>
         /// Returns a hash code for this instance.
@@ -298,15 +275,15 @@ namespace Rocket.Surgery.Build.Information
         public override int GetHashCode()
         {
             var hashCode = -1073977946;
-            hashCode = (hashCode * -1521134295) + Major.GetHashCode();
-            hashCode = (hashCode * -1521134295) + Minor.GetHashCode();
-            hashCode = (hashCode * -1521134295) + Patch.GetHashCode();
-            hashCode = (hashCode * -1521134295) + EqualityComparer<string>.Default.GetHashCode(PreReleaseTag!);
-            hashCode = (hashCode * -1521134295) + EqualityComparer<string>.Default.GetHashCode(PreReleaseTagWithDash!);
-            hashCode = (hashCode * -1521134295) + EqualityComparer<string>.Default.GetHashCode(InformationalVersion!);
-            hashCode = (hashCode * -1521134295) + EqualityComparer<string>.Default.GetHashCode(BranchName!);
-            hashCode = (hashCode * -1521134295) + EqualityComparer<string>.Default.GetHashCode(Sha!);
-            hashCode = (hashCode * -1521134295) + EqualityComparer<string>.Default.GetHashCode(CommitDate!);
+            hashCode = ( hashCode * -1521134295 ) + Major.GetHashCode();
+            hashCode = ( hashCode * -1521134295 ) + Minor.GetHashCode();
+            hashCode = ( hashCode * -1521134295 ) + Patch.GetHashCode();
+            hashCode = ( hashCode * -1521134295 ) + EqualityComparer<string>.Default.GetHashCode(PreReleaseTag!);
+            hashCode = ( hashCode * -1521134295 ) + EqualityComparer<string>.Default.GetHashCode(PreReleaseTagWithDash!);
+            hashCode = ( hashCode * -1521134295 ) + EqualityComparer<string>.Default.GetHashCode(InformationalVersion!);
+            hashCode = ( hashCode * -1521134295 ) + EqualityComparer<string>.Default.GetHashCode(BranchName!);
+            hashCode = ( hashCode * -1521134295 ) + EqualityComparer<string>.Default.GetHashCode(Sha!);
+            hashCode = ( hashCode * -1521134295 ) + EqualityComparer<string>.Default.GetHashCode(CommitDate!);
             return hashCode;
         }
 
@@ -316,10 +293,7 @@ namespace Rocket.Surgery.Build.Information
         /// <param name="version1">The version1.</param>
         /// <param name="version2">The version2.</param>
         /// <returns>The result of the operator.</returns>
-        public static bool operator ==(GitVersion version1, GitVersion version2)
-        {
-            return EqualityComparer<GitVersion>.Default.Equals(version1, version2);
-        }
+        public static bool operator ==(GitVersion version1, GitVersion version2) => EqualityComparer<GitVersion>.Default.Equals(version1, version2);
 
         /// <summary>
         /// Implements the != operator.
@@ -327,9 +301,6 @@ namespace Rocket.Surgery.Build.Information
         /// <param name="version1">The version1.</param>
         /// <param name="version2">The version2.</param>
         /// <returns>The result of the operator.</returns>
-        public static bool operator !=(GitVersion version1, GitVersion version2)
-        {
-            return !(version1 == version2);
-        }
+        public static bool operator !=(GitVersion version1, GitVersion version2) => !( version1 == version2 );
     }
 }
