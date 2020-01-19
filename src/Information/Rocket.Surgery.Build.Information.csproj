@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
         <TargetFrameworks>netstandard2.1;netstandard2.0;netstandard1.3</TargetFrameworks>
         <PackageDescription>Includes classes to extract GitVersion and other assembly information from any assembly that has been built with the Rocket.Surgery.Build.Metadata package.</PackageDescription>
