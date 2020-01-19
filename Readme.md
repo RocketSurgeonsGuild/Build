@@ -34,10 +34,10 @@ Every good Rocket Surgeon needs a way to know where there code came from.  This 
 <!-- history badges -->
 
 <!-- nuget packages -->
-| Package | NuGet | MyGet |
-| ------- | ----- | ----- |
-| Rocket.Surgery.Build.Information | [![nuget-version-8k3un2tofhma-badge]![nuget-downloads-8k3un2tofhma-badge]][nuget-8k3un2tofhma] | [![myget-version-8k3un2tofhma-badge]![myget-downloads-8k3un2tofhma-badge]][myget-8k3un2tofhma] |
-| Rocket.Surgery.Build.Metadata | [![nuget-version-feevisq63few-badge]![nuget-downloads-feevisq63few-badge]][nuget-feevisq63few] | [![myget-version-feevisq63few-badge]![myget-downloads-feevisq63few-badge]][myget-feevisq63few] |
+| Package | NuGet |
+| ------- | ----- |
+| Rocket.Surgery.Build.Information | [![nuget-version-8k3un2tofhma-badge]![nuget-downloads-8k3un2tofhma-badge]][nuget-8k3un2tofhma] |
+| Rocket.Surgery.Build.Metadata | [![nuget-version-feevisq63few-badge]![nuget-downloads-feevisq63few-badge]][nuget-feevisq63few] |
 <!-- nuget packages -->
 
 # Whats next?
@@ -61,15 +61,9 @@ TBD
 [nuget-8k3un2tofhma]: https://www.nuget.org/packages/Rocket.Surgery.Build.Information/
 [nuget-version-8k3un2tofhma-badge]: https://img.shields.io/nuget/v/Rocket.Surgery.Build.Information.svg?color=004880&logo=nuget&style=flat-square "NuGet Version"
 [nuget-downloads-8k3un2tofhma-badge]: https://img.shields.io/nuget/dt/Rocket.Surgery.Build.Information.svg?color=004880&logo=nuget&style=flat-square "NuGet Downloads"
-[myget-8k3un2tofhma]: https://www.myget.org/feed/rocket-surgeons-guild/package/nuget/Rocket.Surgery.Build.Information
-[myget-version-8k3un2tofhma-badge]: https://img.shields.io/myget/rocket-surgeons-guild/vpre/Rocket.Surgery.Build.Information.svg?label=myget&color=004880&logo=nuget&style=flat-square "MyGet Pre-Release Version"
-[myget-downloads-8k3un2tofhma-badge]: https://img.shields.io/myget/rocket-surgeons-guild/dt/Rocket.Surgery.Build.Information.svg?color=004880&logo=nuget&style=flat-square "MyGet Downloads"
 [nuget-feevisq63few]: https://www.nuget.org/packages/Rocket.Surgery.Build.Metadata/
 [nuget-version-feevisq63few-badge]: https://img.shields.io/nuget/v/Rocket.Surgery.Build.Metadata.svg?color=004880&logo=nuget&style=flat-square "NuGet Version"
 [nuget-downloads-feevisq63few-badge]: https://img.shields.io/nuget/dt/Rocket.Surgery.Build.Metadata.svg?color=004880&logo=nuget&style=flat-square "NuGet Downloads"
-[myget-feevisq63few]: https://www.myget.org/feed/rocket-surgeons-guild/package/nuget/Rocket.Surgery.Build.Metadata
-[myget-version-feevisq63few-badge]: https://img.shields.io/myget/rocket-surgeons-guild/vpre/Rocket.Surgery.Build.Metadata.svg?label=myget&color=004880&logo=nuget&style=flat-square "MyGet Pre-Release Version"
-[myget-downloads-feevisq63few-badge]: https://img.shields.io/myget/rocket-surgeons-guild/dt/Rocket.Surgery.Build.Metadata.svg?color=004880&logo=nuget&style=flat-square "MyGet Downloads"
 <!-- generated references -->
 
 <!-- nuke-data
@@ -83,6 +77,4 @@ azurepipelines:
 appveyor:
   account: RocketSurgeonsGuild
   build: Build
-myget:
-  account: rocket-surgeons-guild
 -->
