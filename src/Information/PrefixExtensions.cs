@@ -17,7 +17,7 @@ namespace Rocket.Surgery.Build.Information
         /// <param name="instance">The instance.</param>
         internal static void Infer<T>(this InformationProvider provider, T instance)
         {
-            foreach (var property in instance!.GetType().GetProperties())
+            foreach (var property in instance!.GetType().GetTypeInfo().DeclaredProperties)
             {
                 // simple props only
                 if (
