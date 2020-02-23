@@ -15,7 +15,7 @@ namespace Rocket.Surgery.Build.Information.Tests
         [Fact]
         public void ReturnsInformationForVersionedAssembly()
         {
-            var version = GitVersion.For(typeof(GitVersionTests).GetTypeInfo().Assembly);
+            var version = GitVersion.For(typeof(GitVersion).GetTypeInfo().Assembly);
 
             version.Should().NotBeNull();
             version.SemVer.Should().NotBeNullOrWhiteSpace();
@@ -24,8 +24,8 @@ namespace Rocket.Surgery.Build.Information.Tests
         [Fact]
         public void EqualToEachOther()
         {
-            var version = GitVersion.For(typeof(GitVersionTests).GetTypeInfo().Assembly);
-            var version2 = GitVersion.For(typeof(GitVersionTests).GetTypeInfo().Assembly);
+            var version = GitVersion.For(typeof(GitVersion).GetTypeInfo().Assembly);
+            var version2 = GitVersion.For(typeof(GitVersion).GetTypeInfo().Assembly);
             version.Should().NotBeNull();
             version.Should().Be(version2);
         }
@@ -40,7 +40,7 @@ namespace Rocket.Surgery.Build.Information.Tests
         [Fact]
         public void ForTypeInfo()
         {
-            var version = GitVersion.For(typeof(GitVersionTests).GetTypeInfo());
+            var version = GitVersion.For(typeof(GitVersion).GetTypeInfo());
 
             version.Should().NotBeNull();
             version.HasVersion.Should().BeTrue();
@@ -49,7 +49,7 @@ namespace Rocket.Surgery.Build.Information.Tests
         [Fact]
         public void ForType()
         {
-            var version = GitVersion.For(typeof(GitVersionTests));
+            var version = GitVersion.For(typeof(GitVersion));
 
             version.Should().NotBeNull();
             version.HasVersion.Should().BeTrue();
@@ -58,7 +58,7 @@ namespace Rocket.Surgery.Build.Information.Tests
         [Fact]
         public void ForManyTypesAndReduce()
         {
-            var version = GitVersion.For(typeof(GitVersionTests), typeof(GitVersionTests));
+            var version = GitVersion.For(typeof(GitVersion), typeof(GitVersion));
 
             version.Should().NotBeNull();
             version.Should().HaveCount(1);
@@ -67,7 +67,7 @@ namespace Rocket.Surgery.Build.Information.Tests
         [Fact]
         public void ForManyTypeInfosAndReduce()
         {
-            var version = GitVersion.For(typeof(GitVersionTests).GetTypeInfo(), typeof(GitVersionTests).GetTypeInfo());
+            var version = GitVersion.For(typeof(GitVersion).GetTypeInfo(), typeof(GitVersion).GetTypeInfo());
 
             version.Should().NotBeNull();
             version.Should().HaveCount(1);
@@ -76,7 +76,7 @@ namespace Rocket.Surgery.Build.Information.Tests
         [Fact]
         public void ForManyAssembliesAndReduce()
         {
-            var version = GitVersion.For(typeof(GitVersionTests).GetTypeInfo().Assembly, typeof(GitVersionTests).GetTypeInfo().Assembly);
+            var version = GitVersion.For(typeof(GitVersion).GetTypeInfo().Assembly, typeof(GitVersion).GetTypeInfo().Assembly);
 
             version.Should().NotBeNull();
             version.Should().HaveCount(1);
@@ -85,7 +85,7 @@ namespace Rocket.Surgery.Build.Information.Tests
         [Fact]
         public void ForManyTypesAndReduceEnumerable()
         {
-            var version = GitVersion.For(new[] { typeof(GitVersionTests), typeof(GitVersionTests) }.AsEnumerable());
+            var version = GitVersion.For(new[] { typeof(GitVersion), typeof(GitVersion) }.AsEnumerable());
 
             version.Should().NotBeNull();
             version.Should().HaveCount(1);
@@ -94,7 +94,7 @@ namespace Rocket.Surgery.Build.Information.Tests
         [Fact]
         public void ForManyTypeInfosAndReduceEnumerable()
         {
-            var version = GitVersion.For(new[] { typeof(GitVersionTests).GetTypeInfo(), typeof(GitVersionTests).GetTypeInfo() }.AsEnumerable());
+            var version = GitVersion.For(new[] { typeof(GitVersion).GetTypeInfo(), typeof(GitVersion).GetTypeInfo() }.AsEnumerable());
 
             version.Should().NotBeNull();
             version.Should().HaveCount(1);
@@ -103,7 +103,7 @@ namespace Rocket.Surgery.Build.Information.Tests
         [Fact]
         public void ForManyAssembliesAndReduceEnumerable()
         {
-            var version = GitVersion.For(new[] { typeof(GitVersionTests).GetTypeInfo().Assembly, typeof(GitVersionTests).GetTypeInfo().Assembly }.AsEnumerable());
+            var version = GitVersion.For(new[] { typeof(GitVersion).GetTypeInfo().Assembly, typeof(GitVersion).GetTypeInfo().Assembly }.AsEnumerable());
 
             version.Should().NotBeNull();
             version.Should().HaveCount(1);
