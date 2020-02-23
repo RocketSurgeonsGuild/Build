@@ -10,7 +10,7 @@ using JetBrains.Annotations;
 [AzurePipelinesSteps(
     InvokedTargets = new[] { nameof(Default) },
     NonEntryTargets = new[] { nameof(BuildVersion), nameof(Generate_Code_Coverage_Reports), nameof(Default) },
-    ExcludedTargets = new[] { nameof(Clean), nameof(Restore), nameof(DotnetToolRestore) },
+    ExcludedTargets = new[] { nameof(Restore), nameof(DotnetToolRestore) },
     Parameters = new[] { nameof(CoverageDirectory), nameof(ArtifactsDirectory), nameof(Verbosity), nameof(Configuration) }
 )]
 [PackageIcon("https://raw.githubusercontent.com/RocketSurgeonsGuild/graphics/master/png/social-square-thrust-rounded.png")]
