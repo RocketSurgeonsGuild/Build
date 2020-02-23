@@ -40,6 +40,6 @@ namespace Rocket.Surgery.Build.Information
         /// <param name="key">The key.</param>
         /// <returns><c>true</c> if the specified key has prefix; otherwise, <c>false</c>.</returns>
         public bool HasPrefix(string key) =>
-            _results.Select(z => z.Key).Any(z => z.StartsWith(key, StringComparison.OrdinalIgnoreCase));
+            _results.Any(z => z.Key.StartsWith(key, StringComparison.OrdinalIgnoreCase));
     }
 }
