@@ -20,9 +20,6 @@ namespace Rocket.Surgery.Build.Information
         /// Initializes a new instance of the <see cref="PrefixAttribute"/> class.
         /// </summary>
         /// <param name="key">The key.</param>
-        public PrefixAttribute(string key)
-        {
-            Key = key;
-        }
+        public PrefixAttribute(string key) => Key = key;
     }
 }
