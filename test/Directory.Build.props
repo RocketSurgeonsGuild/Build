@@ -1,6 +1,5 @@
 <Project>
     <Import Project="$([MSBuild]::GetPathOfFileAbove('Directory.Build.props', '$(MSBuildThisFileDirectory)../'))" />
-    <Import Project="..\src\Metadata\build\Rocket.Surgery.Build.Metadata.props" />
     <PropertyGroup>
         <MergeCoverage>true</MergeCoverage>
         <IncludeTestAssembly>true</IncludeTestAssembly>

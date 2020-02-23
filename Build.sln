@@ -21,8 +21,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".build", ".build", "{E3DCB7
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rocket.Surgery.Build.Information", "src\Information\Rocket.Surgery.Build.Information.csproj", "{CD9EB14F-8AFA-41F2-AF3B-AC4C7F5069D1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rocket.Surgery.Build.Metadata", "src\Metadata\Rocket.Surgery.Build.Metadata.csproj", "{DBB6C57D-4FD3-427C-B6B3-81BB4C194335}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rocket.Surgery.Build.Information.Tests", "test\Information.Tests\Rocket.Surgery.Build.Information.Tests.csproj", "{87D9CE28-2F25-4FF2-8487-D3E10AD419DA}"
 EndProject
 Global
@@ -57,18 +55,6 @@ Global
 		{CD9EB14F-8AFA-41F2-AF3B-AC4C7F5069D1}.Release|x64.Build.0 = Release|Any CPU
 		{CD9EB14F-8AFA-41F2-AF3B-AC4C7F5069D1}.Release|x86.ActiveCfg = Release|Any CPU
 		{CD9EB14F-8AFA-41F2-AF3B-AC4C7F5069D1}.Release|x86.Build.0 = Release|Any CPU
-		{DBB6C57D-4FD3-427C-B6B3-81BB4C194335}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DBB6C57D-4FD3-427C-B6B3-81BB4C194335}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DBB6C57D-4FD3-427C-B6B3-81BB4C194335}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{DBB6C57D-4FD3-427C-B6B3-81BB4C194335}.Debug|x64.Build.0 = Debug|Any CPU
-		{DBB6C57D-4FD3-427C-B6B3-81BB4C194335}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{DBB6C57D-4FD3-427C-B6B3-81BB4C194335}.Debug|x86.Build.0 = Debug|Any CPU
-		{DBB6C57D-4FD3-427C-B6B3-81BB4C194335}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DBB6C57D-4FD3-427C-B6B3-81BB4C194335}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DBB6C57D-4FD3-427C-B6B3-81BB4C194335}.Release|x64.ActiveCfg = Release|Any CPU
-		{DBB6C57D-4FD3-427C-B6B3-81BB4C194335}.Release|x64.Build.0 = Release|Any CPU
-		{DBB6C57D-4FD3-427C-B6B3-81BB4C194335}.Release|x86.ActiveCfg = Release|Any CPU
-		{DBB6C57D-4FD3-427C-B6B3-81BB4C194335}.Release|x86.Build.0 = Release|Any CPU
 		{87D9CE28-2F25-4FF2-8487-D3E10AD419DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{87D9CE28-2F25-4FF2-8487-D3E10AD419DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{87D9CE28-2F25-4FF2-8487-D3E10AD419DA}.Debug|x64.ActiveCfg = Debug|Any CPU
@@ -88,7 +74,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{55EFAE2F-A7CA-4917-A381-4A6EF5E79610} = {E3DCB78E-EE06-4EA3-88AC-762D8910387C}
 		{CD9EB14F-8AFA-41F2-AF3B-AC4C7F5069D1} = {8FFDF555-DB50-45F9-9A2D-6410F39151C3}
-		{DBB6C57D-4FD3-427C-B6B3-81BB4C194335} = {8FFDF555-DB50-45F9-9A2D-6410F39151C3}
 		{87D9CE28-2F25-4FF2-8487-D3E10AD419DA} = {DF33E0FB-9790-4654-B60F-8AB22E0CC3D1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution

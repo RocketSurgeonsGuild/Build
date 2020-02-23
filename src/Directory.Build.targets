@@ -1,4 +1,3 @@
 <Project>
-    <Import Project=".\Metadata\build\Rocket.Surgery.Build.Metadata.targets" />
     <Import Project="$([MSBuild]::GetPathOfFileAbove('Directory.Build.targets', '$(MSBuildThisFileDirectory)../'))" />
 </Project>
