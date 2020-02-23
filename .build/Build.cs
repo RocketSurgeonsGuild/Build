@@ -8,8 +8,8 @@ using JetBrains.Annotations;
 [CheckBuildProjectConfigurations]
 [UnsetVisualStudioEnvironmentVariables]
 [AzurePipelinesSteps(
-    InvokedTargets = new[] { nameof(Restore), nameof(Build), nameof(Test), nameof(Pack) },
-    NonEntryTargets = new[] { nameof(BuildVersion), nameof(Generate_Code_Coverage_Reports) },
+    InvokedTargets = new[] { nameof(Default) },
+    NonEntryTargets = new[] { nameof(BuildVersion), nameof(Generate_Code_Coverage_Reports), nameof(Default) },
     ExcludedTargets = new[] { nameof(Clean), nameof(Restore), nameof(DotnetToolRestore) },
     Parameters = new[] { nameof(CoverageDirectory), nameof(ArtifactsDirectory), nameof(Verbosity), nameof(Configuration) }
 )]
